@@ -36,7 +36,9 @@ class VoyageTableController: NSObject, VoyageSetViewModelDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell.init()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "voyageCell", for: indexPath)
+        cell.textLabel?.text = voyageSet.getAt(index: indexPath.row)?.firstname
+        return cell
     }
     
     init(tableView: UITableView) {
