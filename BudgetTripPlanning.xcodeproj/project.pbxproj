@@ -15,6 +15,11 @@
 		0FA5BBE22244F64F00AB5E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FA5BBE02244F64F00AB5E35 /* LaunchScreen.storyboard */; };
 		0FA5BBED2244F65000AB5E35 /* BudgetTripPlanningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5BBEC2244F65000AB5E35 /* BudgetTripPlanningTests.swift */; };
 		0FA5BBF82244F65000AB5E35 /* BudgetTripPlanningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA5BBF72244F65000AB5E35 /* BudgetTripPlanningUITests.swift */; };
+		0FCAAC1122452CC4004FA383 /* VoyageTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCAAC1022452CC4004FA383 /* VoyageTableController.swift */; };
+		0FCAAC1522452FDB004FA383 /* VoyageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCAAC1422452FDB004FA383 /* VoyageSetViewModel.swift */; };
+		0FCAAC1922453352004FA383 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCAAC1822453352004FA383 /* Voyage.swift */; };
+		0FCAAC1B2245355D004FA383 /* VoyageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCAAC1A2245355D004FA383 /* VoyageSet.swift */; };
+		0FCAAC1E224537A0004FA383 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0FCAAC1D224537A0004FA383 /* image.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		0FA5BBF32244F65000AB5E35 /* BudgetTripPlanningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetTripPlanningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA5BBF72244F65000AB5E35 /* BudgetTripPlanningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTripPlanningUITests.swift; sourceTree = "<group>"; };
 		0FA5BBF92244F65000AB5E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FCAAC1022452CC4004FA383 /* VoyageTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTableController.swift; sourceTree = "<group>"; };
+		0FCAAC1422452FDB004FA383 /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSetViewModel.swift; sourceTree = "<group>"; };
+		0FCAAC1822453352004FA383 /* Voyage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
+		0FCAAC1A2245355D004FA383 /* VoyageSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoyageSet.swift; path = ../../../../../Swift/PersonList/PersonList/VoyageSet.swift; sourceTree = "<group>"; };
+		0FCAAC1D224537A0004FA383 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image.jpg; path = ../../../../../../../../Users/alexis.sanchez01/Desktop/image.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +109,11 @@
 		0FA5BBD32244F64E00AB5E35 /* BudgetTripPlanning */ = {
 			isa = PBXGroup;
 			children = (
+				0FCAAC1C2245376E004FA383 /* image */,
+				0FCAAC1622453329004FA383 /* Entities */,
+				0FCAAC1222452F35004FA383 /* Models */,
+				0FCAAC0C22452C23004FA383 /* Controllers */,
 				0FA5BBD42244F64E00AB5E35 /* AppDelegate.swift */,
-				0FA5BBD62244F64E00AB5E35 /* ViewController.swift */,
 				0FA5BBD82244F64F00AB5E35 /* Main.storyboard */,
 				0FA5BBDE2244F64F00AB5E35 /* Assets.xcassets */,
 				0FA5BBE02244F64F00AB5E35 /* LaunchScreen.storyboard */,
@@ -126,6 +139,64 @@
 				0FA5BBF92244F65000AB5E35 /* Info.plist */,
 			);
 			path = BudgetTripPlanningUITests;
+			sourceTree = "<group>";
+		};
+		0FCAAC0C22452C23004FA383 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0FCAAC0E22452C8D004FA383 /* voyage */,
+				0FA5BBD62244F64E00AB5E35 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0FCAAC0E22452C8D004FA383 /* voyage */ = {
+			isa = PBXGroup;
+			children = (
+				0FCAAC1022452CC4004FA383 /* VoyageTableController.swift */,
+			);
+			path = voyage;
+			sourceTree = "<group>";
+		};
+		0FCAAC1222452F35004FA383 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0FCAAC1322452F3D004FA383 /* voyage */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0FCAAC1322452F3D004FA383 /* voyage */ = {
+			isa = PBXGroup;
+			children = (
+				0FCAAC1422452FDB004FA383 /* VoyageSetViewModel.swift */,
+			);
+			path = voyage;
+			sourceTree = "<group>";
+		};
+		0FCAAC1622453329004FA383 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0FCAAC1722453339004FA383 /* voyage */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0FCAAC1722453339004FA383 /* voyage */ = {
+			isa = PBXGroup;
+			children = (
+				0FCAAC1A2245355D004FA383 /* VoyageSet.swift */,
+				0FCAAC1822453352004FA383 /* Voyage.swift */,
+			);
+			path = voyage;
+			sourceTree = "<group>";
+		};
+		0FCAAC1C2245376E004FA383 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				0FCAAC1D224537A0004FA383 /* image.jpg */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +306,7 @@
 				0FA5BBE22244F64F00AB5E35 /* LaunchScreen.storyboard in Resources */,
 				0FA5BBDF2244F64F00AB5E35 /* Assets.xcassets in Resources */,
 				0FA5BBDA2244F64F00AB5E35 /* Main.storyboard in Resources */,
+				0FCAAC1E224537A0004FA383 /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +331,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCAAC1922453352004FA383 /* Voyage.swift in Sources */,
+				0FCAAC1522452FDB004FA383 /* VoyageSetViewModel.swift in Sources */,
 				0FA5BBD72244F64E00AB5E35 /* ViewController.swift in Sources */,
+				0FCAAC1B2245355D004FA383 /* VoyageSet.swift in Sources */,
+				0FCAAC1122452CC4004FA383 /* VoyageTableController.swift in Sources */,
 				0FA5BBD52244F64E00AB5E35 /* AppDelegate.swift in Sources */,
 				0FA5BBDD2244F64F00AB5E35 /* BudgetTripPlanning.xcdatamodeld in Sources */,
 			);

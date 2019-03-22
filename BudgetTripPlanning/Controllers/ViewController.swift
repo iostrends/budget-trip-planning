@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var voyageTableController: VoyageTableController!
+    @IBOutlet weak var voyageTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.voyageTableController = VoyageTableController(tableView: self.voyageTable)
     }
 
 
