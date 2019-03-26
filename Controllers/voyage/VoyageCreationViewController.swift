@@ -27,7 +27,14 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     @IBAction func loadImageButtonTapped(sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
-        
-        present(imagePicker, animated: true, completion: nil)
+        present(imagePicker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imagePicker.dismiss(animated: true)
+        guard let image = info[.originalImage] as? UIImage else {
+            return
+        }
+        imageDisplay.image = image
     }
 }
