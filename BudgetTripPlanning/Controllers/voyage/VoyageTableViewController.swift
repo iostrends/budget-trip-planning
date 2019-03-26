@@ -35,6 +35,15 @@ class VoyageTableViewController: NSObject, VoyageSetViewModelDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "voyageCell", for: indexPath)
         cell.textLabel?.text = self.voyagesViewModel.get(voyageAt: indexPath.row)?.nom
+        if let data = self.voyagesViewModel.get(voyageAt: indexPath.row)?.photo {
+            cell.imageView?.image = UIImage(data: data)
+        }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy"
+        if let date = self.voyagesViewModel.get(voyageAt: indexPath.row)?.dateDebut {
+            let dateString = formatter.string(from: date)
+            cell.detailTextLabel?.text = dateString
+        }
         return cell
     }
     
