@@ -175,6 +175,9 @@
                                     <constraint firstAttribute="height" constant="50" id="IZX-h7-vA7"/>
                                 </constraints>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="vZn-xg-7xJ" kind="presentation" id="tDP-lH-ihF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvl-ed-HZc">
                                 <rect key="frame" x="307.66666666666669" y="647.33333333333337" width="47" height="30"/>
@@ -280,6 +283,113 @@
                 <exit id="Kkl-Wv-xar" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="373.91304347826087" y="239.67391304347828"/>
+        </scene>
+        <!--Personne Ajout View Controller-->
+        <scene sceneID="IJF-1G-O4F">
+            <objects>
+                <viewController id="vZn-xg-7xJ" customClass="PersonneAjoutViewController" customModule="BudgetTripPlanning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wvw-sO-mk1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajout Personne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apf-KG-uYM">
+                                <rect key="frame" x="148.66666666666666" y="44.666666666666664" width="116.99999999999997" height="20.999999999999993"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYc-cK-RPO">
+                                <rect key="frame" x="20" y="136.66666666666666" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date arrivée:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5m-Y5-5Nd">
+                                <rect key="frame" x="20" y="192" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3u-t8-CDZ">
+                                <rect key="frame" x="121" y="132.33333333333334" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PIJ-C3-CPw"/>
+                                    <constraint firstAttribute="width" constant="100" id="qnt-B2-olf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="z9G-z3-MGX">
+                                <rect key="frame" x="115" y="177.33333333333334" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1R7-pP-b6w"/>
+                                    <constraint firstAttribute="width" constant="250" id="8Nd-Rl-XCZ"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="575299223.68812799">
+                                    <!--2019-03-26 13:20:23 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="uQV-up-Bwu">
+                                <rect key="frame" x="113" y="232.66666666666663" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="F9c-56-rMU"/>
+                                    <constraint firstAttribute="height" constant="50" id="zlb-gc-UaF"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="575299344.03746903">
+                                    <!--2019-03-26 13:22:24 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date départ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UL-6t-7uh">
+                                <rect key="frame" x="20" y="247" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDH-Ya-rTB">
+                                <rect key="frame" x="77" y="537" width="53" height="30"/>
+                                <state key="normal" title="Annuler"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piW-4I-8nK">
+                                <rect key="frame" x="287" y="537" width="47" height="30"/>
+                                <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="valider:" destination="vZn-xg-7xJ" eventType="touchUpInside" id="C4e-O6-ZoQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7UL-6t-7uh" firstAttribute="centerY" secondItem="wvw-sO-mk1" secondAttribute="centerY" multiplier="0.7" id="0nS-IP-dkU"/>
+                            <constraint firstItem="z9G-z3-MGX" firstAttribute="leading" secondItem="1vl-H6-1ks" secondAttribute="leading" constant="115" id="4F8-iV-uge"/>
+                            <constraint firstItem="uQV-up-Bwu" firstAttribute="leading" secondItem="1vl-H6-1ks" secondAttribute="leading" constant="113" id="BuQ-Nm-tO0"/>
+                            <constraint firstItem="sYc-cK-RPO" firstAttribute="leading" secondItem="1vl-H6-1ks" secondAttribute="leading" constant="20" id="Cnf-mI-Kp4"/>
+                            <constraint firstItem="u5m-Y5-5Nd" firstAttribute="centerY" secondItem="wvw-sO-mk1" secondAttribute="centerY" multiplier="0.55" id="Dq4-PT-n6P"/>
+                            <constraint firstItem="apf-KG-uYM" firstAttribute="centerX" secondItem="wvw-sO-mk1" secondAttribute="centerX" id="GZa-BE-YEm"/>
+                            <constraint firstItem="apf-KG-uYM" firstAttribute="centerY" secondItem="wvw-sO-mk1" secondAttribute="centerY" multiplier="0.15" id="Mhf-3K-fyf"/>
+                            <constraint firstItem="piW-4I-8nK" firstAttribute="centerY" secondItem="wvw-sO-mk1" secondAttribute="centerY" multiplier="1.5" id="NhI-cW-OlW"/>
+                            <constraint firstItem="MDH-Ya-rTB" firstAttribute="centerY" secondItem="wvw-sO-mk1" secondAttribute="centerY" multiplier="1.5" id="Qp5-Od-29Y"/>
+                            <constraint firstItem="uQV-up-Bwu" firstAttribute="centerY" secondItem="wvw-sO-mk1" secondAttribute="centerY" multiplier="0.7" id="UjG-It-OYy"/>
+                            <constraint firstItem="J3u-t8-CDZ" firstAttribute="leading" secondItem="sYc-cK-RPO" secondAttribute="trailing" constant="60" id="d3T-Jc-AvF"/>
+                            <constraint firstItem="sYc-cK-RPO" firstAttribute="centerY" secondItem="wvw-sO-mk1" secondAttribute="centerY" multiplier="0.4" id="g18-ZT-KH4"/>
+                            <constraint firstItem="z9G-z3-MGX" firstAttribute="centerY" secondItem="wvw-sO-mk1" secondAttribute="centerY" multiplier="0.55" id="iqE-xS-zX2"/>
+                            <constraint firstItem="J3u-t8-CDZ" firstAttribute="centerY" secondItem="wvw-sO-mk1" secondAttribute="centerY" multiplier="0.4" id="qEr-YE-zTQ"/>
+                            <constraint firstItem="piW-4I-8nK" firstAttribute="centerX" secondItem="wvw-sO-mk1" secondAttribute="centerX" multiplier="1.5" id="rbc-a3-IDZ"/>
+                            <constraint firstItem="u5m-Y5-5Nd" firstAttribute="leading" secondItem="1vl-H6-1ks" secondAttribute="leading" constant="20" id="sNH-Nv-odZ"/>
+                            <constraint firstItem="MDH-Ya-rTB" firstAttribute="centerX" secondItem="wvw-sO-mk1" secondAttribute="centerX" multiplier="0.5" id="tak-KD-7XP"/>
+                            <constraint firstItem="7UL-6t-7uh" firstAttribute="leading" secondItem="1vl-H6-1ks" secondAttribute="leading" constant="20" id="zo5-zh-7Wj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1vl-H6-1ks"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateArrivee" destination="z9G-z3-MGX" id="Ulh-R8-6kl"/>
+                        <outlet property="dateDepart" destination="uQV-up-Bwu" id="5KF-sF-qff"/>
+                        <outlet property="nom" destination="J3u-t8-CDZ" id="zcN-wm-3dw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E71-lK-FbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="1008"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XvU-ft-r4q">

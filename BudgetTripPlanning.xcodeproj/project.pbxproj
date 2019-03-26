@@ -24,6 +24,7 @@
 		E988CE50224A42D800E71D21 /* PersonneTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE4F224A42D800E71D21 /* PersonneTableController.swift */; };
 		E988CE52224A479400E71D21 /* PersonneFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */; };
 		E988CE54224A591300E71D21 /* PersonneSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */; };
+		E988CE59224A648100E71D21 /* PersonneAjoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE58224A648100E71D21 /* PersonneAjoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E988CE4F224A42D800E71D21 /* PersonneTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneTableController.swift; sourceTree = "<group>"; };
 		E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneFetchResultController.swift; sourceTree = "<group>"; };
 		E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonneSetViewModel.swift; path = Models/personne/PersonneSetViewModel.swift; sourceTree = SOURCE_ROOT; };
+		E988CE58224A648100E71D21 /* PersonneAjoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonneAjoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 		E988CE4E224A426F00E71D21 /* personne */ = {
 			isa = PBXGroup;
 			children = (
+				E988CE58224A648100E71D21 /* PersonneAjoutViewController.swift */,
 				E988CE4F224A42D800E71D21 /* PersonneTableController.swift */,
 				E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */,
 			);
@@ -362,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E988CE59224A648100E71D21 /* PersonneAjoutViewController.swift in Sources */,
 				0FB062A1224A20EA00EFF43F /* VoyageSet.swift in Sources */,
 				0FB062A5224A210A00EFF43F /* VoyageSetViewModel.swift in Sources */,
 				0FB062AB224A217F00EFF43F /* VoyageTableController.swift in Sources */,
