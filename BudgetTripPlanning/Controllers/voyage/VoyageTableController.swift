@@ -10,44 +10,47 @@ import Foundation
 import UIKit
 
 class VoyageTableController: NSObject, VoyageSetViewModelDelegate, UITableViewDataSource {
-    func dataSetChanged() {
-        
-    }
-    
-    func voyageDeleted(at indexPath: IndexPath) {
-        
-    }
-    
-    func voyageUpdated(at indexPath: IndexPath) {
-        
-    }
-    
-    func voyageAdded(at indexPath: IndexPath) {
-        
-    }
-    
-    
+
     var voyageTableView : UITableView
     var voyagesViewModel : VoyageSetViewModel
-    //var fetchResultController : VoyageFecthResultController
+    let fetchResultController : VoyageFetchResultController
+    
+    init(tableView: UITableView) {
+        self.voyageTableView = tableView
+        self.fetchResultController = VoyageFetchResultController(view : tableView)
+        self.voyagesViewModel = VoyageSetViewModel(data: self.fetchResultController.voyagesFetched)
+        super.init()
+        self.voyageTableView.dataSource = self
+        self.voyagesViewModel.delegate = self
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.voyagesViewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "voyageCell", for: indexPath)
-        //cell.textLabel?.text = voyagesViewModel.voyages.getAt(index: indexPath.row)?.nomVoyage
+        cell.textLabel?.text = self.voyagesViewModel.get(voyageAt: indexPath.row)?.nom
         return cell
     }
     
-    init(tableView: UITableView) {
-        self.voyageTableView = tableView
-        self.voyagesViewModel = VoyageSetViewModel()
-        super.init()
-        self.voyageTableView.dataSource = self
-        self.voyagesViewModel.delegate = self
-        //self.fetchResultController = VoyageFecthResultController(view: tableView)
-        //self.voyagesViewModel = VoyageViewModel(data: self.fetchResultController.voaygesFetched)
-    }    
+    func dataSetChanged() {
+        self.voyageTableView.reloadData()
+    }
+    
+    func voyageDeleted(at indexPath: IndexPath) {
+        self.voyageTableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+    }
+    
+    func voyageUpdated(at indexPath: IndexPath) {
+       self.voyageTableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+    }
+    
+    func voyageAdded(at indexPath: IndexPath) {
+        self.voyageTableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+    }
 }
