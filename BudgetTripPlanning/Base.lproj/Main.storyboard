@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="-415.94202898550731" y="240.40178571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Voyage Creation View Controller-->
         <scene sceneID="kND-ph-eRr">
             <objects>
-                <viewController id="QLH-Cs-DRf" sceneMemberID="viewController">
+                <viewController id="QLH-Cs-DRf" customClass="VoyageCreationViewController" customModule="BudgetTripPlanning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Teo-Sx-NzA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,10 +179,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvl-ed-HZc">
                                 <rect key="frame" x="307.66666666666669" y="647.33333333333337" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <segue destination="29q-Iw-HMk" kind="show" id="6gD-5Z-1S5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptx-t0-kHV">
                                 <rect key="frame" x="56.333333333333343" y="647.33333333333337" width="53" height="30"/>
                                 <state key="normal" title="Annuler"/>
+                                <connections>
+                                    <segue destination="Kkl-Wv-xar" kind="unwind" unwindAction="unwindToThisView:" id="xfA-te-lmA"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ye6-5c-6hH">
                                 <rect key="frame" x="132" y="256" width="250" height="40"/>
@@ -204,7 +210,7 @@
                                     <!--2019-03-26 09:51:57 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-U4-UGr">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-U4-UGr" customClass="I">
                                 <rect key="frame" x="250" y="159" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Parcourir"/>
@@ -259,10 +265,33 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fNi-5a-lSP"/>
                     </view>
+                    <connections>
+                        <outlet property="dateDebt" destination="aZh-Ze-86E" id="ghB-bj-Azi"/>
+                        <outlet property="dateFin" destination="Ye6-5c-6hH" id="LVd-iY-y0u"/>
+                        <outlet property="imageDisplay" destination="mU8-bx-ifo" id="xtR-FI-esf"/>
+                        <outlet property="imagePicker" destination="nhK-U4-UGr" id="S6K-L7-jVf"/>
+                        <outlet property="nomVoyage" destination="ZBJ-8J-pVA" id="LDd-ur-Puq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JL8-9v-Ot5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Kkl-Wv-xar" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="373.91304347826087" y="239.67391304347828"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XvU-ft-r4q">
+            <objects>
+                <viewController id="29q-Iw-HMk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mhl-Y4-VMG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qf4-Ha-NLp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPR-2C-aRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="241"/>
         </scene>
     </scenes>
 </document>

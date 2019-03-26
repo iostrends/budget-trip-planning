@@ -16,11 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var voyagesSet = VoyageSet()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        /*let voyage = Voyage()
-        voyage.nom = "Voy1"
-        voyage.datedepart = Date()
-        voyage.datefin = Date()
-        voyage.photo = nil*/
         return true
     }
 

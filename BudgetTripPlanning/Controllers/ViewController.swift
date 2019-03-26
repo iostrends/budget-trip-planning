@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         self.voyageTableController = VoyageTableController(tableView: self.voyageTable)
     }
 
-
+    @IBAction func unwindToThisView(_ unwindSegue: UIStoryboardSegue) {
+        return
+    }
 }
 

@@ -20,6 +20,7 @@
 		0FB062A8224A217300EFF43F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062A7224A217300EFF43F /* ViewController.swift */; };
 		0FB062AB224A217F00EFF43F /* VoyageTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062AA224A217F00EFF43F /* VoyageTableController.swift */; };
 		0FB062B2224A273200EFF43F /* VoyageFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */; };
+		0FC75D50224A3EC50002AF5C /* VoyageCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		0FB062A7224A217300EFF43F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BudgetTripPlanning/Controllers/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		0FB062AA224A217F00EFF43F /* VoyageTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoyageTableController.swift; path = BudgetTripPlanning/Controllers/voyage/VoyageTableController.swift; sourceTree = SOURCE_ROOT; };
 		0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageFetchResultController.swift; sourceTree = "<group>"; };
+		0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageCreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			children = (
 				0FB062AA224A217F00EFF43F /* VoyageTableController.swift */,
 				0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */,
+				0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */,
 			);
 			path = voyage;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				0FB062A5224A210A00EFF43F /* VoyageSetViewModel.swift in Sources */,
 				0FB062AB224A217F00EFF43F /* VoyageTableController.swift in Sources */,
 				0FB062B2224A273200EFF43F /* VoyageFetchResultController.swift in Sources */,
+				0FC75D50224A3EC50002AF5C /* VoyageCreationViewController.swift in Sources */,
 				0FB06269224A1FC500EFF43F /* AppDelegate.swift in Sources */,
 				0FB0629B224A20B800EFF43F /* CoreDataManager.swift in Sources */,
 				0FB062A8224A217300EFF43F /* ViewController.swift in Sources */,
