@@ -27,10 +27,10 @@
         <relationship name="personne2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" syncable="YES"/>
     </entity>
     <entity name="Voyage" representedClassName="Voyage" syncable="YES" codeGenerationType="class">
-        <attribute name="datedepart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="datefin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="pdatedepart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pdatefin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pnom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pphoto" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="depenseV" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="concernerV" inverseEntity="Depense" syncable="YES"/>
     </entity>
     <elements>
@@ -39,6 +39,6 @@
         <element name="Participer" positionX="-362.69140625" positionY="-460.1171875" width="128" height="103"/>
         <element name="Personne" positionX="-145.33984375" positionY="-383.484375" width="128" height="58"/>
         <element name="Rembourser" positionX="-10.515625" positionY="-529.8125" width="128" height="88"/>
-        <element name="Voyage" positionX="-527.96484375" positionY="-330.3671875" width="128" height="118"/>
+        <element name="Voyage" positionX="-527.96484375" positionY="-330.3671875" width="128" height="120"/>
     </elements>
 </model>

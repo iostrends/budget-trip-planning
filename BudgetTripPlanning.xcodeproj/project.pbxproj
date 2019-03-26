@@ -15,12 +15,12 @@
 		0FB06281224A1FC700EFF43F /* BudgetTripPlanningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB06280224A1FC700EFF43F /* BudgetTripPlanningTests.swift */; };
 		0FB0628C224A1FC700EFF43F /* BudgetTripPlanningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0628B224A1FC700EFF43F /* BudgetTripPlanningUITests.swift */; };
 		0FB0629B224A20B800EFF43F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0629A224A20B800EFF43F /* CoreDataManager.swift */; };
-		0FB062A1224A20EA00EFF43F /* VoyageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0629F224A20EA00EFF43F /* VoyageSet.swift */; };
 		0FB062A5224A210A00EFF43F /* VoyageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062A4224A210A00EFF43F /* VoyageSetViewModel.swift */; };
 		0FB062A8224A217300EFF43F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062A7224A217300EFF43F /* ViewController.swift */; };
-		0FB062AB224A217F00EFF43F /* VoyageTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062AA224A217F00EFF43F /* VoyageTableController.swift */; };
+		0FB062AB224A217F00EFF43F /* VoyageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062AA224A217F00EFF43F /* VoyageTableViewController.swift */; };
 		0FB062B2224A273200EFF43F /* VoyageFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */; };
 		0FC75D50224A3EC50002AF5C /* VoyageCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */; };
+		0FC75D52224A7BB30002AF5C /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75D51224A7BB30002AF5C /* Voyage.swift */; };
 		E988CE50224A42D800E71D21 /* PersonneTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE4F224A42D800E71D21 /* PersonneTableController.swift */; };
 		E988CE52224A479400E71D21 /* PersonneFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */; };
 		E988CE54224A591300E71D21 /* PersonneSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */; };
@@ -58,12 +58,12 @@
 		0FB0628B224A1FC700EFF43F /* BudgetTripPlanningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTripPlanningUITests.swift; sourceTree = "<group>"; };
 		0FB0628D224A1FC700EFF43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FB0629A224A20B800EFF43F /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = BudgetTripPlanning/CoreData/CoreDataManager.swift; sourceTree = SOURCE_ROOT; };
-		0FB0629F224A20EA00EFF43F /* VoyageSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoyageSet.swift; path = BudgetTripPlanning/Entities/voyage/VoyageSet.swift; sourceTree = SOURCE_ROOT; };
 		0FB062A4224A210A00EFF43F /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoyageSetViewModel.swift; path = BudgetTripPlanning/Models/voyage/VoyageSetViewModel.swift; sourceTree = SOURCE_ROOT; };
 		0FB062A7224A217300EFF43F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BudgetTripPlanning/Controllers/ViewController.swift; sourceTree = SOURCE_ROOT; };
-		0FB062AA224A217F00EFF43F /* VoyageTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoyageTableController.swift; path = BudgetTripPlanning/Controllers/voyage/VoyageTableController.swift; sourceTree = SOURCE_ROOT; };
+		0FB062AA224A217F00EFF43F /* VoyageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoyageTableViewController.swift; path = BudgetTripPlanning/Controllers/voyage/VoyageTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageFetchResultController.swift; sourceTree = "<group>"; };
 		0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageCreationViewController.swift; sourceTree = "<group>"; };
+		0FC75D51224A7BB30002AF5C /* Voyage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Voyage.swift; path = Controllers/voyage/Voyage.swift; sourceTree = SOURCE_ROOT; };
 		E988CE4F224A42D800E71D21 /* PersonneTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneTableController.swift; sourceTree = "<group>"; };
 		E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneFetchResultController.swift; sourceTree = "<group>"; };
 		E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonneSetViewModel.swift; path = Models/personne/PersonneSetViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -170,7 +170,7 @@
 		0FB0629D224A20C900EFF43F /* voyage */ = {
 			isa = PBXGroup;
 			children = (
-				0FB0629F224A20EA00EFF43F /* VoyageSet.swift */,
+				0FC75D51224A7BB30002AF5C /* Voyage.swift */,
 			);
 			path = voyage;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 		0FB062A9224A217600EFF43F /* voyage */ = {
 			isa = PBXGroup;
 			children = (
-				0FB062AA224A217F00EFF43F /* VoyageTableController.swift */,
+				0FB062AA224A217F00EFF43F /* VoyageTableViewController.swift */,
 				0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */,
 				0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */,
 			);
@@ -362,9 +362,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FB062A1224A20EA00EFF43F /* VoyageSet.swift in Sources */,
 				0FB062A5224A210A00EFF43F /* VoyageSetViewModel.swift in Sources */,
-				0FB062AB224A217F00EFF43F /* VoyageTableController.swift in Sources */,
+				0FB062AB224A217F00EFF43F /* VoyageTableViewController.swift in Sources */,
 				0FB062B2224A273200EFF43F /* VoyageFetchResultController.swift in Sources */,
 				0FC75D50224A3EC50002AF5C /* VoyageCreationViewController.swift in Sources */,
 				0FB06269224A1FC500EFF43F /* AppDelegate.swift in Sources */,
@@ -373,6 +372,7 @@
 				E988CE50224A42D800E71D21 /* PersonneTableController.swift in Sources */,
 				0FB0629B224A20B800EFF43F /* CoreDataManager.swift in Sources */,
 				0FB062A8224A217300EFF43F /* ViewController.swift in Sources */,
+				0FC75D52224A7BB30002AF5C /* Voyage.swift in Sources */,
 				0FB06271224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

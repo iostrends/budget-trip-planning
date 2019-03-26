@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class VoyageTableController: NSObject, VoyageSetViewModelDelegate, UITableViewDataSource {
+class VoyageTableViewController: NSObject, VoyageSetViewModelDelegate, UITableViewDataSource {
 
     var voyageTableView : UITableView
     var voyagesViewModel : VoyageSetViewModel

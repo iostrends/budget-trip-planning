@@ -18,11 +18,26 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     
     let imagePicker = UIImagePickerController()
     
+    var newVoyage : Voyage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
     }
-       
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "validerAddVoyage" {
+            let nomVoyage : String = self.nomVoyage.text!
+            let dateFin : Date = self.dateFin.date
+            let dateDebut : Date = self.dateDebut.date
+            let image : UIImage = self.imageDisplay.image!
+            
+            self.newVoyage = Voyage(nom: nomVoyage, depart: dateDebut, fin: dateFin, photo: image.pngData())
+            
+        }else{
+            self.newVoyage = nil
+        }
+    }
     
     @IBAction func loadImageButtonTapped(sender: UIButton) {
         imagePicker.allowsEditing = false

@@ -10,16 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var voyageTableController: VoyageTableController!
+    var voyageTableController: VoyageTableViewController!
     @IBOutlet weak var voyageTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.voyageTableController = VoyageTableController(tableView: self.voyageTable)
+        self.voyageTableController = VoyageTableViewController(tableView: self.voyageTable)
     }
 
-    @IBAction func unwindToThisView(_ unwindSegue: UIStoryboardSegue) {
-        return
+    @IBAction func unwindToThisView(_ sender: UIStoryboardSegue) {
+        if sender.identifier == "validerAddVoyage" {
+            if let newVoyageController = sender.source as? VoyageCreationViewController {
+                if let voyage = newVoyageController.newVoyage{
+                    self.voyageTableController.voyagesViewModel.add(voyage: voyage)
+                }
+            }
+        }
     }
 }
 

@@ -180,14 +180,14 @@
                                 <rect key="frame" x="307.66666666666669" y="647.33333333333337" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
                                 <connections>
-                                    <segue destination="29q-Iw-HMk" kind="show" id="6gD-5Z-1S5"/>
+                                    <segue destination="Kkl-Wv-xar" kind="unwind" identifier="validerAddVoyage" unwindAction="unwindToThisView:" id="CcX-CY-UBw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptx-t0-kHV">
                                 <rect key="frame" x="56.333333333333343" y="647.33333333333337" width="53" height="30"/>
                                 <state key="normal" title="Annuler"/>
                                 <connections>
-                                    <segue destination="Kkl-Wv-xar" kind="unwind" unwindAction="unwindToThisView:" id="xfA-te-lmA"/>
+                                    <segue destination="Kkl-Wv-xar" kind="unwind" identifier="cancelAddVoyage" unwindAction="unwindToThisView:" id="peR-fm-8kv"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ye6-5c-6hH">
@@ -219,6 +219,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mU8-bx-ifo">
+                                <rect key="frame" x="137" y="144" width="74" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="7KY-nk-lrU"/>
+                                    <constraint firstAttribute="height" constant="43" id="vls-cZ-9jN"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSo-nS-ZEI">
                                 <rect key="frame" x="231" y="150.66666666666666" width="62" height="30"/>
                                 <state key="normal" title="parcourir"/>
@@ -226,13 +233,6 @@
                                     <action selector="loadImageButtonTappedWithSender:" destination="QLH-Cs-DRf" eventType="touchUpInside" id="kSk-aZ-cGE"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mU8-bx-ifo">
-                                <rect key="frame" x="17" y="74" width="218" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="7KY-nk-lrU"/>
-                                    <constraint firstAttribute="height" constant="43" id="vls-cZ-9jN"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
