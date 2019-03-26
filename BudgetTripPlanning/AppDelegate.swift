@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         let date = Date.init()
-       /* for i in 1..<5 {
+       /* for i in 1..<51 {
             let voyage = Voyage(nomVoyage: "voyage\(i)", dateDebut: date, dateFin: date, photo: img)
             self.voyagesSet.add(voyage: voyage)
         }*/
