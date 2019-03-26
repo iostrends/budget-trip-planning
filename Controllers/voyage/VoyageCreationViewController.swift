@@ -9,18 +9,25 @@
 import Foundation
 import UIKit
 
-class VoyageCreationViewController: UIViewController {
+class VoyageCreationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var nomVoyage: UITextField!
     @IBOutlet weak var imageDisplay: UIImageView!
-    @IBOutlet weak var imagePickerButton: UIButton!
-    @IBOutlet weak var dateDebut: UIDatePicker!
     @IBOutlet weak var dateFin: UIDatePicker!
+    @IBOutlet weak var dateDebut: UIDatePicker!
     
-  //  override func
+    let imagePicker = UIImagePickerController()
     
-  //  let imagePicker = UIImagePickerController()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imagePicker.delegate = self
+    }
+       
     
-    
-    
+    @IBAction func loadImageButtonTapped(sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
 }
