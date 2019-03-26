@@ -210,11 +210,6 @@
                                     <!--2019-03-26 09:51:57 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-U4-UGr" customClass="I">
-                                <rect key="frame" x="250" y="159" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Parcourir"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZBJ-8J-pVA">
                                 <rect key="frame" x="128" y="95.333333333333329" width="100" height="30"/>
                                 <constraints>
@@ -231,15 +226,24 @@
                                     <constraint firstAttribute="height" constant="43" id="vls-cZ-9jN"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSo-nS-ZEI">
+                                <rect key="frame" x="231" y="150.66666666666666" width="62" height="30"/>
+                                <state key="normal" title="parcourir"/>
+                                <connections>
+                                    <action selector="loadImageButtonTappedWithSender:" destination="QLH-Cs-DRf" eventType="touchUpInside" id="kSk-aZ-cGE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ptx-t0-kHV" firstAttribute="centerX" secondItem="Teo-Sx-NzA" secondAttribute="centerX" multiplier="0.4" id="4Nx-Hp-sWe"/>
+                            <constraint firstItem="LSo-nS-ZEI" firstAttribute="leading" secondItem="mU8-bx-ifo" secondAttribute="trailing" constant="20" id="4ba-Y1-OrE"/>
                             <constraint firstItem="udq-2G-1jT" firstAttribute="centerY" secondItem="Teo-Sx-NzA" secondAttribute="centerY" multiplier="0.95" id="7Of-f7-1JV"/>
                             <constraint firstItem="H9c-po-Hik" firstAttribute="leading" secondItem="fNi-5a-lSP" secondAttribute="leading" constant="17" id="CIM-rj-4YI"/>
                             <constraint firstItem="ptx-t0-kHV" firstAttribute="centerY" secondItem="Teo-Sx-NzA" secondAttribute="centerY" multiplier="1.8" id="Chn-G8-wSL"/>
                             <constraint firstItem="olD-LX-qBP" firstAttribute="top" secondItem="fNi-5a-lSP" secondAttribute="top" constant="10" id="D6i-2w-eqP"/>
                             <constraint firstItem="H9c-po-Hik" firstAttribute="centerY" secondItem="Teo-Sx-NzA" secondAttribute="centerY" multiplier="0.3" id="EKH-mu-VVM"/>
+                            <constraint firstItem="LSo-nS-ZEI" firstAttribute="centerY" secondItem="Teo-Sx-NzA" secondAttribute="centerY" multiplier="0.45" id="GHH-1v-ScU"/>
                             <constraint firstItem="aZh-Ze-86E" firstAttribute="centerY" secondItem="Teo-Sx-NzA" secondAttribute="centerY" multiplier="0.6" id="MVB-18-Zqj"/>
                             <constraint firstItem="Ofq-PJ-8wW" firstAttribute="centerX" secondItem="Teo-Sx-NzA" secondAttribute="centerX" id="MWL-gk-ab1"/>
                             <constraint firstItem="BdQ-rW-vd3" firstAttribute="centerX" secondItem="Teo-Sx-NzA" secondAttribute="centerX" multiplier="0.6" id="N1N-Qg-e25"/>
@@ -266,10 +270,9 @@
                         <viewLayoutGuide key="safeArea" id="fNi-5a-lSP"/>
                     </view>
                     <connections>
-                        <outlet property="dateDebt" destination="aZh-Ze-86E" id="ghB-bj-Azi"/>
+                        <outlet property="dateDebut" destination="aZh-Ze-86E" id="Rfa-RN-caF"/>
                         <outlet property="dateFin" destination="Ye6-5c-6hH" id="LVd-iY-y0u"/>
                         <outlet property="imageDisplay" destination="mU8-bx-ifo" id="xtR-FI-esf"/>
-                        <outlet property="imagePicker" destination="nhK-U4-UGr" id="S6K-L7-jVf"/>
                         <outlet property="nomVoyage" destination="ZBJ-8J-pVA" id="LDd-ur-Puq"/>
                     </connections>
                 </viewController>
