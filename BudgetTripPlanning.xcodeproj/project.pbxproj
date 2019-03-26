@@ -66,7 +66,7 @@
 		0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageCreationViewController.swift; sourceTree = "<group>"; };
 		E988CE4F224A42D800E71D21 /* PersonneTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneTableController.swift; sourceTree = "<group>"; };
 		E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneFetchResultController.swift; sourceTree = "<group>"; };
-		E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonneSetViewModel.swift; path = Controllers/personne/PersonneSetViewModel.swift; sourceTree = SOURCE_ROOT; };
+		E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonneSetViewModel.swift; path = Models/personne/PersonneSetViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +178,7 @@
 		0FB062A2224A20F500EFF43F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E988CE55224A5C4800E71D21 /* personne */,
 				0FB062A3224A20FD00EFF43F /* voyage */,
 			);
 			name = Models;
@@ -188,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				0FB062A4224A210A00EFF43F /* VoyageSetViewModel.swift */,
-				E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */,
 			);
 			path = voyage;
 			sourceTree = "<group>";
@@ -219,6 +219,14 @@
 			children = (
 				E988CE4F224A42D800E71D21 /* PersonneTableController.swift */,
 				E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */,
+			);
+			path = personne;
+			sourceTree = "<group>";
+		};
+		E988CE55224A5C4800E71D21 /* personne */ = {
+			isa = PBXGroup;
+			children = (
+				E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */,
 			);
 			path = personne;
 			sourceTree = "<group>";
