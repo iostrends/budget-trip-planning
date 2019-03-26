@@ -19,29 +19,23 @@ protocol VoyageSetViewModelDelegate {
 
 class VoyageSetViewModel {
     var delegate: VoyageSetViewModelDelegate? = nil
-    //var voyagesFetched: NSFFecthedResultsController<Voyage>
+    var voyagesFetched: NSFetchedResultsController<Voyage>
     
-    //init(data: NSFFecthedResultsController<Voyage>) {
-        //self.voyagesFetched = data
-    //}
+    init(data: NSFetchedResultsController<Voyage>) {
+        self.voyagesFetched = data
+    }
     
-    private var voyagesSet = VoyageSet()
-    var voyages : [Voyage] = []
-    init() {
-        guard let appDelegate = UIApplication.shared.delegate else {
-            fatalError()
-        }
-        self.voyagesSet = (appDelegate as! AppDelegate).voyagesSet
-        let it = voyagesSet.makeIterator()
-        while !it.end() {
-            if let voyage = it.current() {
-                voyages.append(voyage)
-            }
-            it.next()
+    public func add(voyage: Voyage) {
+        if let indexPath = self.voyagesFetched.indexPath(forObject: voyage) {
+            self.delegate?.voyageAdded(at: indexPath)
         }
     }
     
     public var count : Int {
-        return self.voyagesSet.count
+        return self.voyagesFetched.fetchedObjects?.count ?? 0
+    }
+    
+    public func get(voyageAt index: Int) -> Voyage?{
+        return self.voyagesFetched.object(at: IndexPath(row: index, section: 0))
     }
 }

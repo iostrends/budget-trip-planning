@@ -13,18 +13,8 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var voyagesSet = VoyageSet()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        guard let img = UIImage(named: "image.jpg") else {
-            return false
-        }
-        let date = Date.init()
-       /* for i in 1..<51 {
-            let voyage = Voyage(nomVoyage: "voyage\(i)", dateDebut: date, dateFin: date, photo: img)
-            self.voyagesSet.add(voyage: voyage)
-        }*/
         return true
     }
 
