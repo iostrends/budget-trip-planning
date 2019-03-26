@@ -21,6 +21,9 @@
 		0FB062AB224A217F00EFF43F /* VoyageTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062AA224A217F00EFF43F /* VoyageTableController.swift */; };
 		0FB062B2224A273200EFF43F /* VoyageFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */; };
 		0FC75D50224A3EC50002AF5C /* VoyageCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */; };
+		E988CE50224A42D800E71D21 /* PersonneTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE4F224A42D800E71D21 /* PersonneTableController.swift */; };
+		E988CE52224A479400E71D21 /* PersonneFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */; };
+		E988CE54224A591300E71D21 /* PersonneSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		0FB062AA224A217F00EFF43F /* VoyageTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoyageTableController.swift; path = BudgetTripPlanning/Controllers/voyage/VoyageTableController.swift; sourceTree = SOURCE_ROOT; };
 		0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageFetchResultController.swift; sourceTree = "<group>"; };
 		0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageCreationViewController.swift; sourceTree = "<group>"; };
+		E988CE4F224A42D800E71D21 /* PersonneTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneTableController.swift; sourceTree = "<group>"; };
+		E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneFetchResultController.swift; sourceTree = "<group>"; };
+		E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonneSetViewModel.swift; path = Controllers/personne/PersonneSetViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0FB062A4224A210A00EFF43F /* VoyageSetViewModel.swift */,
+				E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */,
 			);
 			path = voyage;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 		0FB062A6224A211200EFF43F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E988CE4E224A426F00E71D21 /* personne */,
 				0FB062A9224A217600EFF43F /* voyage */,
 				0FB062A7224A217300EFF43F /* ViewController.swift */,
 			);
@@ -204,6 +212,15 @@
 				0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */,
 			);
 			path = voyage;
+			sourceTree = "<group>";
+		};
+		E988CE4E224A426F00E71D21 /* personne */ = {
+			isa = PBXGroup;
+			children = (
+				E988CE4F224A42D800E71D21 /* PersonneTableController.swift */,
+				E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */,
+			);
+			path = personne;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +360,9 @@
 				0FB062B2224A273200EFF43F /* VoyageFetchResultController.swift in Sources */,
 				0FC75D50224A3EC50002AF5C /* VoyageCreationViewController.swift in Sources */,
 				0FB06269224A1FC500EFF43F /* AppDelegate.swift in Sources */,
+				E988CE52224A479400E71D21 /* PersonneFetchResultController.swift in Sources */,
+				E988CE54224A591300E71D21 /* PersonneSetViewModel.swift in Sources */,
+				E988CE50224A42D800E71D21 /* PersonneTableController.swift in Sources */,
 				0FB0629B224A20B800EFF43F /* CoreDataManager.swift in Sources */,
 				0FB062A8224A217300EFF43F /* ViewController.swift in Sources */,
 				0FB06271224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld in Sources */,
