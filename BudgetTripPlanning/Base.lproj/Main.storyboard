@@ -166,7 +166,7 @@
                                         <rect key="frame" x="0.0" y="28" width="250" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MUC-tP-jhT" id="dGm-3d-A6R">
-                                            <rect key="frame" x="0.0" y="0.0" width="250" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -186,7 +186,7 @@
                                 </constraints>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <segue destination="vZn-xg-7xJ" kind="presentation" id="tDP-lH-ihF"/>
+                                    <segue destination="vZn-xg-7xJ" kind="presentation" identifier="addNewPersonSegue" id="tDP-lH-ihF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvl-ed-HZc">
@@ -368,7 +368,7 @@
                                 <rect key="frame" x="744.5" y="1009.5" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
                                 <connections>
-                                    <segue destination="ubv-Sl-dbC" kind="unwind" identifier="okAddPersonneVoyage" unwindAction="unwindToThisView:" id="9pB-4G-sgD"/>
+                                    <segue destination="ubv-Sl-dbC" kind="unwind" identifier="okAddPersonneVoyage" unwindAction="unwindToVoyageCreation:" id="KG4-lb-E3W"/>
                                 </connections>
                             </button>
                         </subviews>

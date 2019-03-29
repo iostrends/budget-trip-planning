@@ -22,9 +22,9 @@ class PersonneTableViewController: NSObject, PersonneSetViewModelDelegate, UITab
     var personnesViewModel : PersonneSetViewModel
     let fetchResultController : PersonneFetchResultController
     
-    init(tableView: UITableView) {
+    init(tableView: UITableView, voyage : Voyage?) {
         self.personneTableView = tableView
-        self.fetchResultController = PersonneFetchResultController(view : tableView)
+        self.fetchResultController = PersonneFetchResultController(view : tableView, leVoyage : voyage)
         self.personnesViewModel = PersonneSetViewModel(data: self.fetchResultController.personnesFetched)
         super.init()
         self.personneTableView.dataSource = self
@@ -54,10 +54,12 @@ class PersonneTableViewController: NSObject, PersonneSetViewModelDelegate, UITab
     }
     
     func personneUpdated(at indexPath: IndexPath) {
+        
         self.personneTableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
     }
     
     func personneAdded(at indexPath: IndexPath) {
+       // dataSetChanged()
         self.personneTableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
     }
 }

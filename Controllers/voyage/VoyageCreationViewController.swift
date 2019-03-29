@@ -20,12 +20,13 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     var personneTableViewController: PersonneTableViewController!
     let imagePicker = UIImagePickerController()
     
-    var newVoyage : Voyage?
+    var newVoyage : Voyage!
     var personnes : [Personne] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-          self.personneTableViewController = PersonneTableViewController(tableView: self.tableviewPersonne)
+        self.newVoyage = Voyage(nom: "nouveau voyage")
+        self.personneTableViewController = PersonneTableViewController(tableView: self.tableviewPersonne, voyage: newVoyage)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,7 +36,10 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
             let dateDebut : Date = self.dateDebut.date
             let image : UIImage = self.imageDisplay.image!
             
-            self.newVoyage = Voyage(nom: nomVoyage, depart: dateDebut, fin: dateFin, photo: image.pngData())
+            self.newVoyage!.pnom = nomVoyage
+            self.newVoyage!.dateDebut = dateDebut
+            self.newVoyage!.dateFin = dateFin
+            self.newVoyage!.photo = image.pngData()
             
             for personne in personnes {
                 personne.participer = newVoyage!
@@ -43,7 +47,13 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
             }
             
             
-        }else{
+        }
+        else if segue.identifier == "addNewPersonSegue"{
+            if let vc = segue.destination as? PersonneAjoutViewController{
+                vc.voyage = self.newVoyage
+            }
+        }
+        else{
             self.newVoyage = nil
         }
     }
@@ -62,12 +72,17 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
         imageDisplay.image = image
     }
     
-    @IBAction func unwindToThisView(_ sender: UIStoryboardSegue) {
+    @IBAction func unwindToVoyageCreation(_ sender: UIStoryboardSegue) {
         if sender.identifier == "okAddPersonneVoyage" {
             if let personneAjoutViewController = sender.source as? PersonneAjoutViewController {
                 if let personne = personneAjoutViewController.personne{
+                    self.newVoyage = personneAjoutViewController.voyage
+//                    personne.participer = self.newVoyage
+                    //self.newVoyage!.addToParticipants(personne)
+//                    CoreDataManager.save()
                     self.personneTableViewController.personnesViewModel.add(personne: personne)
                     personnes.append(personne)
+                   
                 }
             }
         }
