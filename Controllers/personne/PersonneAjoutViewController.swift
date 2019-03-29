@@ -20,4 +20,16 @@ class PersonneAjoutViewController: UIViewController, UINavigationControllerDeleg
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "okAddPersonneVoyage" {
+            let nom : String = self.nomPersonne.text!
+            let dateDepart : Date = self.dateDepart.date
+            let dateArrivee : Date = self.dateArrivee.date
+            
+            self.personne = Personne(nom: nom, dateDepart: dateDepart, dateArrivee: dateArrivee)
+            
+        }else{
+            self.personne = nil
+        }
+    }
 }
