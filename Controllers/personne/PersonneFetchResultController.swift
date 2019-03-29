@@ -26,7 +26,7 @@ class PersonneFetchResultController: NSObject, NSFetchedResultsControllerDelegat
     
     lazy var personnesFetched : NSFetchedResultsController<Personne> = {
         let request : NSFetchRequest<Personne> = Personne.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Personne.nom), ascending:true)]
+        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Personne.pnom), ascending:true)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         fetchResultController.delegate = self
         return fetchResultController

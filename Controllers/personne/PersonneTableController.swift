@@ -41,7 +41,7 @@ class PersonneTableController: NSObject, PersonneSetViewModelDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personneCell", for: indexPath)
-        cell.textLabel?.text = self.personnesViewModel.get(personneAt: indexPath.row)?.nom
+        cell.textLabel?.text = self.personnesViewModel.get(personneAt: indexPath.row)?.pnom
         return cell
     }
     
