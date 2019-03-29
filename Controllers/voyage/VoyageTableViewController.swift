@@ -5,6 +5,7 @@
 //  Created by Alexis SANCHEZ01 (01) on 22/03/2019.
 //  Copyright © 2019 Alexis SANCHEZ01 (01). All rights reserved.
 //
+
 import Foundation
 import UIKit
 
@@ -18,7 +19,7 @@ class VoyageTableViewController: NSObject, VoyageSetViewModelDelegate, UITableVi
         self.voyageTableView = tableView
         self.fetchResultController = VoyageFetchResultController(view : tableView)
         self.voyagesViewModel = VoyageSetViewModel(data: self.fetchResultController.voyagesFetched)
-        super.init()	
+        super.init()
         self.voyageTableView.dataSource = self
         self.voyagesViewModel.delegate = self
     }
@@ -29,6 +30,19 @@ class VoyageTableViewController: NSObject, VoyageSetViewModelDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.voyagesViewModel.count
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            if let voyage = self.voyagesViewModel.get(voyageAt: indexPath.row) {
+                CoreDataManager.context.delete(voyage)
+                self.voyagesViewModel.delete(voyage: voyage)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

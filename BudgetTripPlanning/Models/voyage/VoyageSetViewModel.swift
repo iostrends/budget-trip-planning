@@ -38,4 +38,11 @@ class VoyageSetViewModel {
     public func get(voyageAt index: Int) -> Voyage?{
         return self.voyagesFetched.object(at: IndexPath(row: index, section: 0))
     }
+    
+    public func delete(voyage: Voyage) {
+        if let indexPath = self.voyagesFetched.indexPath(forObject: voyage) {
+            self.delegate?.voyageDeleted(at: indexPath)
+        }
+    }
+    
 }
