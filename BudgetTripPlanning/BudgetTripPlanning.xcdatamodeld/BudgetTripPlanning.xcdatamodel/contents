@@ -16,7 +16,7 @@
         <attribute name="pdateArrivee" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pdateDepart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pnom" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="participer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Voyage" inverseName="participants" inverseEntity="Voyage" syncable="YES"/>
+        <relationship name="participer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyage" inverseName="participants" inverseEntity="Voyage" syncable="YES"/>
     </entity>
     <entity name="Rembourser" representedClassName="Rembourser" syncable="YES" codeGenerationType="class">
         <attribute name="pmontant" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
