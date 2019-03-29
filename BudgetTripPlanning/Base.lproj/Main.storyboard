@@ -287,7 +287,7 @@
                         <outlet property="dateFin" destination="Ye6-5c-6hH" id="LVd-iY-y0u"/>
                         <outlet property="imageDisplay" destination="mU8-bx-ifo" id="xtR-FI-esf"/>
                         <outlet property="nomVoyage" destination="ZBJ-8J-pVA" id="LDd-ur-Puq"/>
-                        <outlet property="tableview" destination="Ofq-PJ-8wW" id="AlX-lO-UgD"/>
+                        <outlet property="tableviewPersonne" destination="Ofq-PJ-8wW" id="5MP-Y3-g8I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JL8-9v-Ot5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -398,8 +398,8 @@
                     </view>
                     <connections>
                         <outlet property="dateArrivee" destination="z9G-z3-MGX" id="Ulh-R8-6kl"/>
-                        <outlet property="dateDepart" destination="uQV-up-Bwu" id="5KF-sF-qff"/>
-                        <outlet property="nom" destination="J3u-t8-CDZ" id="zcN-wm-3dw"/>
+                        <outlet property="dateDepart" destination="uQV-up-Bwu" id="eEN-sB-ULh"/>
+                        <outlet property="nomPersonne" destination="J3u-t8-CDZ" id="Zlh-oJ-blh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E71-lK-FbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
