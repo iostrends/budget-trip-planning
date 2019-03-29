@@ -277,6 +277,7 @@
                         <outlet property="dateFin" destination="Ye6-5c-6hH" id="LVd-iY-y0u"/>
                         <outlet property="imageDisplay" destination="mU8-bx-ifo" id="xtR-FI-esf"/>
                         <outlet property="nomVoyage" destination="ZBJ-8J-pVA" id="LDd-ur-Puq"/>
+                        <outlet property="tableview" destination="Ofq-PJ-8wW" id="AlX-lO-UgD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JL8-9v-Ot5" userLabel="First Responder" sceneMemberID="firstResponder"/>

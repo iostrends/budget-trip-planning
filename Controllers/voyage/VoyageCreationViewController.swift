@@ -15,6 +15,7 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var imageDisplay: UIImageView!
     @IBOutlet weak var dateFin: UIDatePicker!
     @IBOutlet weak var dateDebut: UIDatePicker!
+    @IBOutlet weak var tableview: UITableView!
     
     var personneTableViewController: PersonneTableViewController!
     let imagePicker = UIImagePickerController()
