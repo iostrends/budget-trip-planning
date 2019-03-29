@@ -26,7 +26,7 @@
 		E988CE54224A591300E71D21 /* PersonneSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */; };
 		E988CE59224A648100E71D21 /* PersonneAjoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE58224A648100E71D21 /* PersonneAjoutViewController.swift */; };
 		E9CF5BFF224E1DBE00843616 /* Personne.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF5BFE224E1DBE00843616 /* Personne.swift */; };
-		E9CF5C01224E24C000843616 /* VoyageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF5C00224E24C000843616 /* VoyageTableViewController.swift */; };
+		E9CF5C03224E522A00843616 /* VoyageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF5C02224E522A00843616 /* VoyageTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 		E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonneSetViewModel.swift; path = Models/personne/PersonneSetViewModel.swift; sourceTree = SOURCE_ROOT; };
 		E988CE58224A648100E71D21 /* PersonneAjoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonneAjoutViewController.swift; sourceTree = "<group>"; };
 		E9CF5BFE224E1DBE00843616 /* Personne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personne.swift; sourceTree = "<group>"; };
-		E9CF5C00224E24C000843616 /* VoyageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTableViewController.swift; sourceTree = "<group>"; };
+		E9CF5C02224E522A00843616 /* VoyageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoyageTableViewController.swift; path = BudgetTripPlanning/Controllers/voyage/VoyageTableViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,9 +215,12 @@
 		0FB062A9224A217600EFF43F /* voyage */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
+				E9CF5C02224E522A00843616 /* VoyageTableViewController.swift */,
+>>>>>>> newMaster
 				0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */,
 				0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */,
-				E9CF5C00224E24C000843616 /* VoyageTableViewController.swift */,
 			);
 			path = voyage;
 			sourceTree = "<group>";
@@ -394,11 +397,15 @@
 				0FC75D50224A3EC50002AF5C /* VoyageCreationViewController.swift in Sources */,
 				E9CF5BFF224E1DBE00843616 /* Personne.swift in Sources */,
 				0FB06269224A1FC500EFF43F /* AppDelegate.swift in Sources */,
+<<<<<<< HEAD
 				E9CF5C01224E24C000843616 /* VoyageTableViewController.swift in Sources */,
+=======
+>>>>>>> newMaster
 				E988CE52224A479400E71D21 /* PersonneFetchResultController.swift in Sources */,
 				E988CE54224A591300E71D21 /* PersonneSetViewModel.swift in Sources */,
 				E988CE50224A42D800E71D21 /* PersonneTableViewController.swift in Sources */,
 				0FB0629B224A20B800EFF43F /* CoreDataManager.swift in Sources */,
+				E9CF5C03224E522A00843616 /* VoyageTableViewController.swift in Sources */,
 				0FB062A8224A217300EFF43F /* ViewController.swift in Sources */,
 				0FC75D52224A7BB30002AF5C /* Voyage.swift in Sources */,
 				0FB06271224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld in Sources */,
@@ -577,13 +584,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 73C7JQPQB8;
+				DEVELOPMENT_TEAM = Q727X47U57;
 				INFOPLIST_FILE = BudgetTripPlanning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ALS.BudgetTripPlanning;
+				PRODUCT_BUNDLE_IDENTIFIER = AS.BudgetTripPlanning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -595,13 +602,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 73C7JQPQB8;
+				DEVELOPMENT_TEAM = Q727X47U57;
 				INFOPLIST_FILE = BudgetTripPlanning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ALS.BudgetTripPlanning;
+				PRODUCT_BUNDLE_IDENTIFIER = AS.BudgetTripPlanning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -21,7 +21,7 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     let imagePicker = UIImagePickerController()
     
     var newVoyage : Voyage?
-    
+    var personnes : [Personne] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -36,6 +36,12 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
             let image : UIImage = self.imageDisplay.image!
             
             self.newVoyage = Voyage(nom: nomVoyage, depart: dateDebut, fin: dateFin, photo: image.pngData())
+            
+            for personne in personnes {
+                personne.participer = newVoyage!
+                self.newVoyage!.addToParticipants(personne)
+            }
+            
             
         }else{
             self.newVoyage = nil
@@ -61,6 +67,7 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
             if let personneAjoutViewController = sender.source as? PersonneAjoutViewController {
                 if let personne = personneAjoutViewController.personne{
                     self.personneTableViewController.personnesViewModel.add(personne: personne)
+                    personnes.append(personne)
                 }
             }
         }
