@@ -15,7 +15,7 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var imageDisplay: UIImageView!
     @IBOutlet weak var dateFin: UIDatePicker!
     @IBOutlet weak var dateDebut: UIDatePicker!
-    @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var tableviewPersonne: UITableView!
     
     var personneTableViewController: PersonneTableViewController!
     let imagePicker = UIImagePickerController()
@@ -25,6 +25,7 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+          self.personneTableViewController = PersonneTableViewController(tableView: self.tableviewPersonne)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,7 +57,7 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     }
     
     @IBAction func unwindToThisView(_ sender: UIStoryboardSegue) {
-        if sender.identifier == "okNewPersonneVoyage" {
+        if sender.identifier == "okAddPersonneVoyage" {
             if let personneAjoutViewController = sender.source as? PersonneAjoutViewController {
                 if let personne = personneAjoutViewController.personne{
                     self.personneTableViewController.personnesViewModel.add(personne: personne)
