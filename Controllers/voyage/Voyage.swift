@@ -18,16 +18,21 @@ extension Voyage {
         self.pphoto = photo
     }
     
+    convenience init(nom: String) {
+        self.init(context: CoreDataManager.context)
+        self.pnom = nom
+    }
+    
     public var nom : String { return self.pnom ?? "" }
-    public var dateDebut : Date {
+    public var dateDebut : Date? {
         get{
-            return self.pdatedepart!
+            return self.pdatedepart
         }
         set{
             self.pdatedepart = newValue
         }
     }
-    public var dateFin : Date {
+    public var dateFin : Date? {
         get{
             return self.pdatefin!
         }

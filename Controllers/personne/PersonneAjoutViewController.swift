@@ -15,6 +15,7 @@ class PersonneAjoutViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var dateArrivee: UIDatePicker!
     @IBOutlet weak var dateDepart: UIDatePicker!
     var personne : Personne?
+    var voyage : Voyage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,8 @@ class PersonneAjoutViewController: UIViewController, UINavigationControllerDeleg
             let dateDepart : Date = self.dateDepart.date
             let dateArrivee : Date = self.dateArrivee.date
             
-            self.personne = Personne(nom: nom, dateDepart: dateDepart, dateArrivee: dateArrivee)
-            
+            self.personne = Personne(nom: nom, voyage: self.voyage, dateDepart: dateDepart, dateArrivee: dateArrivee)
+            CoreDataManager.save()
         }else{
             self.personne = nil
         }

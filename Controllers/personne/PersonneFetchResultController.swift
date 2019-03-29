@@ -13,11 +13,13 @@ import UIKit
 
 class PersonneFetchResultController: NSObject, NSFetchedResultsControllerDelegate {
     let tableView : UITableView
+    var voyage : Voyage?
     
-    init(view: UITableView) {
+    init(view: UITableView, leVoyage: Voyage?) {
         self.tableView = view
         super.init()
         do{
+            self.voyage = leVoyage
             try self.personnesFetched.performFetch()
         }catch let error as NSError {
             fatalError(error.description)
@@ -26,6 +28,10 @@ class PersonneFetchResultController: NSObject, NSFetchedResultsControllerDelegat
     
     lazy var personnesFetched : NSFetchedResultsController<Personne> = {
         let request : NSFetchRequest<Personne> = Personne.fetchRequest()
+        if let leVoyage = voyage{
+        request.predicate = NSPredicate(format: "participer.pnom == %@", leVoyage.nom)
+        }
+        
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Personne.pnom), ascending:true)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         fetchResultController.delegate = self
