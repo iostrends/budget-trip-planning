@@ -16,6 +16,7 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var dateFin: UIDatePicker!
     @IBOutlet weak var dateDebut: UIDatePicker!
     
+    var personneTableViewController: PersonneTableViewController!
     let imagePicker = UIImagePickerController()
     
     var newVoyage : Voyage?
@@ -51,5 +52,15 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
             return
         }
         imageDisplay.image = image
+    }
+    
+    @IBAction func unwindToThisView(_ sender: UIStoryboardSegue) {
+        if sender.identifier == "okNewPersonneVoyage" {
+            if let personneAjoutViewController = sender.source as? PersonneAjoutViewController {
+                if let personne = personneAjoutViewController.personne{
+                    self.personneTableViewController.personnesViewModel.add(personne: personne)
+                }
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@
 import Foundation
 import UIKit
 
-class PersonneTableController: NSObject, PersonneSetViewModelDelegate, UITableViewDataSource {
+class PersonneTableViewController: NSObject, PersonneSetViewModelDelegate, UITableViewDataSource {
     
     var personneTableView : UITableView
     var personnesViewModel : PersonneSetViewModel

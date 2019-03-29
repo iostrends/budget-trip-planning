@@ -14,6 +14,8 @@ class PersonneAjoutViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var nomPersonne: UITextField!
     @IBOutlet weak var dateArrivee: UIDatePicker!
     @IBOutlet weak var dateDepart: UIDatePicker!
+    var personne : Personne?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
