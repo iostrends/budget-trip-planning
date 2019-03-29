@@ -162,7 +162,7 @@
                                     <constraint firstAttribute="width" constant="250" id="q1d-7y-plN"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="voyageCell" id="MUC-tP-jhT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="personneCell" id="MUC-tP-jhT">
                                         <rect key="frame" x="0.0" y="28" width="250" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MUC-tP-jhT" id="dGm-3d-A6R">
@@ -368,7 +368,6 @@
                                 <rect key="frame" x="287" y="657" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
                                 <connections>
-                                    <action selector="valider:" destination="vZn-xg-7xJ" eventType="touchUpInside" id="C4e-O6-ZoQ"/>
                                     <segue destination="ubv-Sl-dbC" kind="unwind" identifier="okAddPersonneVoyage" unwindAction="unwindToThisView:" id="9pB-4G-sgD"/>
                                 </connections>
                             </button>
