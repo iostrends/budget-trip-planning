@@ -26,67 +26,79 @@
             </objects>
             <point key="canvasLocation" x="-1233" y="242"/>
         </scene>
-        <!--View Controller-->
+        <!--Budget Trip Planning-->
         <scene sceneID="rSN-02-3IT">
             <objects>
                 <viewController id="DeI-UX-bNV" customClass="ViewController" customModule="BudgetTripPlanning" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="g0G-wz-XH9">
+                    <view key="view" contentMode="scaleToFill" semanticContentAttribute="spatial" id="g0G-wz-XH9">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WXB-wP-Rhv">
-                                <rect key="frame" x="20" y="199" width="984" height="1147"/>
+                                <rect key="frame" x="20" y="205.5" width="984" height="1140.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="voyageCell" rowHeight="131" id="06w-1g-hwA" customClass="VoyageDisplayCell" customModule="BudgetTripPlanning" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="voyageCell" editingAccessoryType="detailDisclosureButton" rowHeight="131" id="06w-1g-hwA" customClass="VoyageDisplayCell" customModule="BudgetTripPlanning" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="984" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="06w-1g-hwA" id="eRF-Gt-2AP">
-                                            <rect key="frame" x="0.0" y="0.0" width="984" height="131"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="917" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NomVoyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEc-Yr-2iI">
-                                                    <rect key="frame" x="15" y="15" width="92" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSl-te-Xf9">
-                                                    <rect key="frame" x="15" y="55" width="36" height="21"/>
+                                                    <rect key="frame" x="286" y="84" width="36" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zA7-VO-rUd">
-                                                    <rect key="frame" x="157" y="15" width="812" height="101"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zA7-VO-rUd">
+                                                    <rect key="frame" x="15" y="15" width="237" height="101"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="237" id="b0d-Dk-j9s"/>
+                                                    </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Début du voyage le : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qal-TO-NIV">
+                                                    <rect key="frame" x="286" y="55" width="161" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NomVoyage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEc-Yr-2iI">
+                                                    <rect key="frame" x="412" y="15" width="93" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="zA7-VO-rUd" secondAttribute="trailing" id="2SQ-Fh-vE5"/>
-                                                <constraint firstItem="jEc-Yr-2iI" firstAttribute="leading" secondItem="eRF-Gt-2AP" secondAttribute="leadingMargin" id="8bU-ov-fUc"/>
-                                                <constraint firstItem="zA7-VO-rUd" firstAttribute="leading" secondItem="jEc-Yr-2iI" secondAttribute="trailing" constant="50" id="Lfk-BD-yvk"/>
-                                                <constraint firstItem="zA7-VO-rUd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dSl-te-Xf9" secondAttribute="trailing" constant="8" symbolic="YES" id="O7l-iN-4xH"/>
-                                                <constraint firstItem="zA7-VO-rUd" firstAttribute="top" secondItem="eRF-Gt-2AP" secondAttribute="topMargin" id="Umk-gN-nmP"/>
-                                                <constraint firstItem="dSl-te-Xf9" firstAttribute="leading" secondItem="eRF-Gt-2AP" secondAttribute="leadingMargin" id="ZF1-NI-ZH1"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="zA7-VO-rUd" secondAttribute="trailing" id="ZtX-cg-jRB"/>
-                                                <constraint firstItem="dSl-te-Xf9" firstAttribute="top" secondItem="jEc-Yr-2iI" secondAttribute="bottom" constant="19" id="ch1-Fj-EPy"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="zA7-VO-rUd" secondAttribute="trailing" id="h09-8h-d4F"/>
-                                                <constraint firstItem="jEc-Yr-2iI" firstAttribute="top" secondItem="eRF-Gt-2AP" secondAttribute="topMargin" id="ioF-KK-H63"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="zA7-VO-rUd" secondAttribute="bottom" id="o1n-vF-kQN"/>
+                                                <constraint firstItem="dSl-te-Xf9" firstAttribute="top" secondItem="Qal-TO-NIV" secondAttribute="bottom" constant="8" symbolic="YES" id="0GL-ra-5yQ"/>
+                                                <constraint firstItem="zA7-VO-rUd" firstAttribute="centerY" secondItem="eRF-Gt-2AP" secondAttribute="centerY" id="2xf-Ay-Alm"/>
+                                                <constraint firstItem="jEc-Yr-2iI" firstAttribute="centerX" secondItem="eRF-Gt-2AP" secondAttribute="centerX" id="5Je-f0-NKL"/>
+                                                <constraint firstItem="Qal-TO-NIV" firstAttribute="leading" secondItem="dSl-te-Xf9" secondAttribute="leading" id="GR0-82-2jo"/>
+                                                <constraint firstItem="jEc-Yr-2iI" firstAttribute="leading" secondItem="zA7-VO-rUd" secondAttribute="trailing" constant="160" id="PGZ-Au-VE6"/>
+                                                <constraint firstItem="zA7-VO-rUd" firstAttribute="leading" secondItem="eRF-Gt-2AP" secondAttribute="leadingMargin" id="aJb-P4-4pG"/>
+                                                <constraint firstItem="zA7-VO-rUd" firstAttribute="bottom" secondItem="eRF-Gt-2AP" secondAttribute="bottomMargin" id="bab-HU-PWh"/>
+                                                <constraint firstItem="dSl-te-Xf9" firstAttribute="leading" secondItem="zA7-VO-rUd" secondAttribute="trailing" constant="34" id="bh3-hg-Zc9"/>
+                                                <constraint firstItem="jEc-Yr-2iI" firstAttribute="top" secondItem="zA7-VO-rUd" secondAttribute="top" id="mb4-ER-mZ0"/>
+                                                <constraint firstItem="zA7-VO-rUd" firstAttribute="centerY" secondItem="Qal-TO-NIV" secondAttribute="centerY" id="vog-Tt-Exm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateVoyageLabel" destination="dSl-te-Xf9" id="UTb-Jg-oRL"/>
+                                            <outlet property="nomVoyageLabel" destination="jEc-Yr-2iI" id="ivG-qM-BhR"/>
+                                            <outlet property="photoVoyage" destination="zA7-VO-rUd" id="JVf-W8-QwU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voyages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfN-Sf-7r9">
-                                <rect key="frame" x="479.5" y="128" width="65" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voyages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfN-Sf-7r9">
+                                <rect key="frame" x="469.5" y="128" width="85" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RL9-1C-8Oi">
-                                <rect key="frame" x="972" y="123" width="30" height="30"/>
-                                <state key="normal" title="Add"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RL9-1C-8Oi">
+                                <rect key="frame" x="980" y="123" width="22" height="22"/>
                                 <connections>
                                     <segue destination="QLH-Cs-DRf" kind="presentation" id="LEc-Zi-SRa"/>
                                 </connections>
@@ -107,14 +119,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YB6-ox-9pq"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BRK-nS-dI2"/>
+                    <navigationItem key="navigationItem" title="Budget Trip Planning" id="BRK-nS-dI2"/>
                     <connections>
                         <outlet property="voyageTable" destination="WXB-wP-Rhv" id="XvH-K5-YW0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="521-aX-kue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-415.94202898550731" y="240.40178571428569"/>
+            <point key="canvasLocation" x="-416.015625" y="240.26354319180086"/>
         </scene>
         <!--Voyage Creation View Controller-->
         <scene sceneID="kND-ph-eRr">
@@ -166,7 +178,7 @@
                                         <rect key="frame" x="0.0" y="28" width="250" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MUC-tP-jhT" id="dGm-3d-A6R">
-                                            <rect key="frame" x="0.0" y="0.0" width="250" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

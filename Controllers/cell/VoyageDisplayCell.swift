@@ -11,4 +11,7 @@ import UIKit
 
 class VoyageDisplayCell: UITableViewCell {
     
+    @IBOutlet weak var nomVoyageLabel: UILabel!
+    @IBOutlet weak var dateVoyageLabel: UILabel!
+    @IBOutlet weak var photoVoyage: UIImageView!
 }
