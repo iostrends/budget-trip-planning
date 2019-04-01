@@ -100,7 +100,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RL9-1C-8Oi">
                                 <rect key="frame" x="980" y="123" width="22" height="22"/>
                                 <connections>
-                                    <segue destination="QLH-Cs-DRf" kind="presentation" id="LEc-Zi-SRa"/>
+                                    <segue destination="QLH-Cs-DRf" kind="presentation" identifier="addVoyageButton" id="LEc-Zi-SRa"/>
                                 </connections>
                             </button>
                         </subviews>
