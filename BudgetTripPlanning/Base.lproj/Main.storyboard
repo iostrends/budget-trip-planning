@@ -190,13 +190,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udq-2G-1jT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udq-2G-1jT">
                                 <rect key="frame" x="487" y="624" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="8eC-Sk-Pjv"/>
                                     <constraint firstAttribute="height" constant="50" id="IZX-h7-vA7"/>
                                 </constraints>
-                                <state key="normal" title="+"/>
                                 <connections>
                                     <segue destination="vZn-xg-7xJ" kind="presentation" identifier="addNewPersonSegue" id="tDP-lH-ihF"/>
                                 </connections>
@@ -373,7 +372,7 @@
                                 <rect key="frame" x="229.5" y="1009.5" width="53" height="30"/>
                                 <state key="normal" title="Annuler"/>
                                 <connections>
-                                    <segue destination="ubv-Sl-dbC" kind="unwind" identifier="cancelAddPersonneVoyage" unwindAction="unwindToThisView:" id="DlO-og-cg7"/>
+                                    <segue destination="ubv-Sl-dbC" kind="unwind" unwindAction="unwindToVoyageCreation:" id="21V-ix-zNW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piW-4I-8nK">
