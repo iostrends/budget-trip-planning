@@ -11,13 +11,15 @@ import UIKit
 class ViewController: UIViewController {
     var voyageTableController: VoyageTableViewController!
     @IBOutlet weak var voyageTable: UITableView!
-    var collectionView : UICollectionView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.voyageTableController = VoyageTableViewController(tableView: self.voyageTable)     
+        self.voyageTableController = VoyageTableViewController(tableView: self.voyageTable)
     }
 
+
+        
+    }
+    
     @IBAction func unwindToThisView(_ sender: UIStoryboardSegue) {
         if sender.identifier == "validerAddVoyage" {
             if let newVoyageController = sender.source as? VoyageCreationViewController {

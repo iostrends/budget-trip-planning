@@ -29,7 +29,7 @@ class PersonneFetchResultController: NSObject, NSFetchedResultsControllerDelegat
     lazy var personnesFetched : NSFetchedResultsController<Personne> = {
         let request : NSFetchRequest<Personne> = Personne.fetchRequest()
         if let leVoyage = voyage{
-        request.predicate = NSPredicate(format: "participer.pnom == %@", leVoyage.nom)
+        request.predicate = NSPredicate(format: "participer == %@", leVoyage)
         }
         
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Personne.pnom), ascending:true)]
