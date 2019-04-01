@@ -29,13 +29,13 @@
         <attribute name="pnom" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pphoto" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="depenseV" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="concernerV" inverseEntity="Depense" syncable="YES"/>
-        <relationship name="participants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Personne" inverseName="participer" inverseEntity="Personne" syncable="YES"/>
+        <relationship name="participants" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Personne" inverseName="participer" inverseEntity="Personne" syncable="YES"/>
     </entity>
     <elements>
         <element name="Depense" positionX="-229.95703125" positionY="-126.04296875" width="128" height="118"/>
         <element name="Depenser" positionX="49.69921875" positionY="-311.69140625" width="128" height="88"/>
         <element name="Personne" positionX="-145.33984375" positionY="-383.484375" width="128" height="103"/>
         <element name="Rembourser" positionX="-10.515625" positionY="-529.8125" width="128" height="88"/>
-        <element name="Voyage" positionX="-527.96484375" positionY="-330.3671875" width="128" height="133"/>
+        <element name="Voyage" positionX="-527.96484375" positionY="-330.3671875" width="128" height="135"/>
     </elements>
 </model>

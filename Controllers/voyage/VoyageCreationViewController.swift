@@ -25,7 +25,7 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        self.newVoyage = Voyage(nom: "nouveau voyage")
+        self.newVoyage = Voyage(nom: "nouveau voyage ")
         self.personneTableViewController = PersonneTableViewController(tableView: self.tableviewPersonne, voyage: newVoyage)
     }
     
