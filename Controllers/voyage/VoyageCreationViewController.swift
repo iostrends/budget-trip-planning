@@ -52,9 +52,8 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
             if let vc = segue.destination as? PersonneAjoutViewController{
                 vc.voyage = self.newVoyage
             }
-        }
-        else{
-            self.newVoyage = nil
+        }else if segue.identifier == "cancelAddVoyage" {
+            CoreDataManager.context.delete(self.newVoyage)
         }
     }
     
