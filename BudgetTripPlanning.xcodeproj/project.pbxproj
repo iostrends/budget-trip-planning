@@ -18,8 +18,7 @@
 		0FB062A5224A210A00EFF43F /* VoyageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062A4224A210A00EFF43F /* VoyageSetViewModel.swift */; };
 		0FB062A8224A217300EFF43F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062A7224A217300EFF43F /* ViewController.swift */; };
 		0FB062B2224A273200EFF43F /* VoyageFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */; };
-		0FB25A0B22525ADD00BEEE34 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB25A0A22525ADD00BEEE34 /* icon.png */; };
-		0FB25A0D22525D5600BEEE34 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB25A0C22525D5600BEEE34 /* icon2.png */; };
+		0FB25A0F2252765E00BEEE34 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB25A0E2252765D00BEEE34 /* icon.png */; };
 		0FC75D50224A3EC50002AF5C /* VoyageCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */; };
 		0FC75D52224A7BB30002AF5C /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75D51224A7BB30002AF5C /* Voyage.swift */; };
 		0FCF2D5F224E36DD00899479 /* VoyageDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCF2D5E224E36DD00899479 /* VoyageDisplayCell.swift */; };
@@ -66,8 +65,7 @@
 		0FB062A4224A210A00EFF43F /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoyageSetViewModel.swift; path = BudgetTripPlanning/Models/voyage/VoyageSetViewModel.swift; sourceTree = SOURCE_ROOT; };
 		0FB062A7224A217300EFF43F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BudgetTripPlanning/Controllers/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		0FB062B1224A273200EFF43F /* VoyageFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageFetchResultController.swift; sourceTree = "<group>"; };
-		0FB25A0A22525ADD00BEEE34 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../../../../../../../Users/alexis.sanchez01/Desktop/icon.png; sourceTree = "<group>"; };
-		0FB25A0C22525D5600BEEE34 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon2.png; path = ../../../../../../../../../Users/alexis.sanchez01/Desktop/icon2.png; sourceTree = "<group>"; };
+		0FB25A0E2252765D00BEEE34 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = BudgetTripPlanning/assets/icon/icon.png; sourceTree = SOURCE_ROOT; };
 		0FC75D4F224A3EC50002AF5C /* VoyageCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageCreationViewController.swift; sourceTree = "<group>"; };
 		0FC75D51224A7BB30002AF5C /* Voyage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Voyage.swift; path = Controllers/voyage/Voyage.swift; sourceTree = SOURCE_ROOT; };
 		0FCF2D5E224E36DD00899479 /* VoyageDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageDisplayCell.swift; sourceTree = "<group>"; };
@@ -246,8 +244,7 @@
 		0FB25A0922525AD400BEEE34 /* icon */ = {
 			isa = PBXGroup;
 			children = (
-				0FB25A0C22525D5600BEEE34 /* icon2.png */,
-				0FB25A0A22525ADD00BEEE34 /* icon.png */,
+				0FB25A0E2252765D00BEEE34 /* icon.png */,
 			);
 			path = icon;
 			sourceTree = "<group>";
@@ -390,8 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FB25A0B22525ADD00BEEE34 /* icon.png in Resources */,
-				0FB25A0D22525D5600BEEE34 /* icon2.png in Resources */,
+				0FB25A0F2252765E00BEEE34 /* icon.png in Resources */,
 				0FB06276224A1FC600EFF43F /* LaunchScreen.storyboard in Resources */,
 				0FB06273224A1FC600EFF43F /* Assets.xcassets in Resources */,
 				0FB0626E224A1FC500EFF43F /* Main.storyboard in Resources */,
