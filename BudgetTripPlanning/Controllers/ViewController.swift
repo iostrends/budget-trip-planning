@@ -16,9 +16,6 @@ class ViewController: UIViewController {
         self.voyageTableController = VoyageTableViewController(tableView: self.voyageTable)
     }
 
-
-        
-    }
     
     @IBAction func unwindToThisView(_ sender: UIStoryboardSegue) {
         if sender.identifier == "validerAddVoyage" {
