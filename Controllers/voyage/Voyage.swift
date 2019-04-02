@@ -34,10 +34,10 @@ extension Voyage {
     }
     public var dateFin : Date? {
         get{
-            return self.pdatefin!
+            return self.pdatefin
         }
         set{
-            self.pdatedepart = newValue
+            self.pdatefin = newValue
         }
     }
     public var photo : Data? {

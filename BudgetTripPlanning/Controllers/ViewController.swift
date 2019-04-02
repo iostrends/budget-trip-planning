@@ -16,13 +16,20 @@ class ViewController: UIViewController {
         self.voyageTableController = VoyageTableViewController(tableView: self.voyageTable)
     }
 
-    
     @IBAction func unwindToThisView(_ sender: UIStoryboardSegue) {
         if sender.identifier == "validerAddVoyage" {
             if let newVoyageController = sender.source as? VoyageCreationViewController {
                 if let voyage = newVoyageController.newVoyage{
                     self.voyageTableController.voyagesViewModel.add(voyage: voyage)
                 }
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showVoyageDetails" {
+            if let vc = segue.destination as? VoyageDetailsViewController {
+                vc.voyage = self.voyageTableController.voyageSelected
             }
         }
     }

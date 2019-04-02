@@ -38,4 +38,10 @@ class PersonneSetViewModel {
     public func get(personneAt index: Int) -> Personne?{
         return self.personnesFetched.object(at: IndexPath(row: index, section: 0))
     }
+    
+    public func delete(personne: Personne) {
+        if let indexPath = self.personnesFetched.indexPath(forObject: personne) {
+            self.delegate?.personneDeleted(at: indexPath)
+        }
+    }
 }

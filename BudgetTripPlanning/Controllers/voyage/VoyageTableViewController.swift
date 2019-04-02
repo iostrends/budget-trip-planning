@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
-class VoyageTableViewController: NSObject, VoyageSetViewModelDelegate, UITableViewDataSource {
+class VoyageTableViewController: NSObject, VoyageSetViewModelDelegate, UITableViewDataSource, UITableViewDelegate {
     
     var voyageTableView : UITableView
     var voyagesViewModel : VoyageSetViewModel
     let fetchResultController : VoyageFetchResultController
+    var voyageSelected : Voyage?
     
     init(tableView: UITableView) {
         self.voyageTableView = tableView
@@ -21,6 +22,7 @@ class VoyageTableViewController: NSObject, VoyageSetViewModelDelegate, UITableVi
         self.voyagesViewModel = VoyageSetViewModel(data: self.fetchResultController.voyagesFetched)
         super.init()
         self.voyageTableView.dataSource = self
+        self.voyageTableView.delegate = self
         self.voyagesViewModel.delegate = self
     }
     
@@ -34,6 +36,13 @@ class VoyageTableViewController: NSObject, VoyageSetViewModelDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if let voyage = self.voyagesViewModel.get(voyageAt: indexPath.row) {
+            self.voyageSelected = voyage
+        }
+        return indexPath
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

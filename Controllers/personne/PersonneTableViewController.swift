@@ -45,6 +45,15 @@ class PersonneTableViewController: NSObject, PersonneSetViewModelDelegate, UITab
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            if let personne = self.personnesViewModel.get(personneAt: indexPath.row) {
+                CoreDataManager.context.delete(personne)
+                self.personnesViewModel.delete(personne: personne)
+            }
+        }
+    }
+    
     func dataSetChanged() {
         self.personneTableView.reloadData()
     }
