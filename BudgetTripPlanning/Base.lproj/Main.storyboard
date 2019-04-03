@@ -477,6 +477,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="380" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nOW-lW-U0a" kind="show" identifier="showDetailsDepense" id="65O-Dl-nFd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -543,7 +546,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BhO-Br-xua">
-                                <rect key="frame" x="75" y="100" width="365" height="235"/>
+                                <rect key="frame" x="75" y="150" width="365" height="235"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="235" id="XMy-Wy-dqt"/>
                                     <constraint firstAttribute="width" constant="365" id="q0p-lG-LEF"/>
@@ -918,6 +921,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="696" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nOW-lW-U0a" kind="show" identifier="showDetailsDepense" id="UGS-iE-XZR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -966,4 +972,7 @@
             <point key="canvasLocation" x="2078.90625" y="234.99267935578328"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UGS-iE-XZR"/>
+    </inferredMetricsTieBreakers>
 </document>
