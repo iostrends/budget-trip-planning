@@ -32,8 +32,7 @@ class PersonneDetailsViewController: UIViewController, UINavigationControllerDel
         if let date = self.personne?.dateDepart {
             let dateString = formatter.string(from: date)
             self.dateDepart.text = dateString
-        }
-        
+        }        
         self.depenseTableViewController = DepenseTableViewController(tableView: self.tableDepense, personne: self.personne!)
     }    
 }

@@ -44,7 +44,7 @@ class VoyageDetailsViewController: UIViewController {
             if let vc = segue.destination as? PersonneAjoutViewController{
                 vc.voyage = self.voyage
             }
-        }else if segue.identifier == "showDetailsPerson" {
+        }else if segue.identifier == "showDetailsPersonne" {
             if let vc = segue.destination as? PersonneDetailsViewController{
                 vc.personne = self.personneTableViewController.personneSelected
             }

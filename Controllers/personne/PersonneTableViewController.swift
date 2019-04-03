@@ -16,7 +16,7 @@
 import Foundation
 import UIKit
 
-class PersonneTableViewController: NSObject, PersonneSetViewModelDelegate, UITableViewDataSource {
+class PersonneTableViewController: NSObject, PersonneSetViewModelDelegate, UITableViewDataSource, UITableViewDelegate {
     
     var personneTableView : UITableView
     var personnesViewModel : PersonneSetViewModel
@@ -29,6 +29,7 @@ class PersonneTableViewController: NSObject, PersonneSetViewModelDelegate, UITab
         self.personnesViewModel = PersonneSetViewModel(data: self.fetchResultController.personnesFetched)
         super.init()
         self.personneTableView.dataSource = self
+        self.personneTableView.delegate = self
         self.personnesViewModel.delegate = self
     }
     
