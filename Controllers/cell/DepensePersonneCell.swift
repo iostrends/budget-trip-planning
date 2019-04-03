@@ -15,4 +15,16 @@ class DepensePersonneCell: UITableViewCell {
     @IBOutlet weak var montantPersonne: UITextField!
     @IBOutlet weak var checkBox: UIButton!
     
+    
+    @IBAction func checkMarkTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            
+        }) { (success) in
+            UIView.animate(withDuration: 0.2, delay: 0.1, options: .curveLinear, animations: {
+                sender.isSelected = !sender.isSelected
+                sender.transform = .identity
+            }, completion: nil)
+        }
+    }
 }

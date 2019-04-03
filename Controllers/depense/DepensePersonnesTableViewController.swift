@@ -42,8 +42,10 @@ class DepensePersonnesTableViewController: NSObject, PersonneSetViewModelDelegat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "personneCell", for: indexPath)
-        cell.textLabel?.text = self.personnesViewModel.get(personneAt: indexPath.row)?.pnom
+        let cell = tableView.dequeueReusableCell(withIdentifier: "depensePersonneCell", for: indexPath)as! DepensePersonneCell
+        cell.personneNomLabel.text = self.personnesViewModel.get(personneAt: indexPath.row)?.pnom
+        cell.checkBox.setImage(UIImage(named: "Checkmarkempty"), for: .normal)
+        cell.checkBox.setImage(UIImage(named:"Checkmark"), for: .selected)
         return cell
     }
     
@@ -61,6 +63,21 @@ class DepensePersonnesTableViewController: NSObject, PersonneSetViewModelDelegat
                 self.personnesViewModel.delete(personne: personne)
             }
         }
+    }
+    
+    func getAllPersonsSelected() -> [(Personne, String)] {
+        var personsSelected : [(Personne, String)] = []
+        for i in 0...self.personneTableView.numberOfRows(inSection: 0) {
+            if let cell = self.personneTableView.cellForRow(at: NSIndexPath(row: i, section: 0) as IndexPath) as? DepensePersonneCell {
+                if cell.checkBox.isSelected {
+                    if let personne = self.personnesViewModel.get(personneAt: i) {
+                        let pair = (personne, cell.montantPersonne.text!)
+                        personsSelected.append(pair)
+                    }
+                }
+            }
+        }
+        return personsSelected
     }
     
     func dataSetChanged() {

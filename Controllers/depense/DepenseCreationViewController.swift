@@ -21,12 +21,12 @@ class DepenseCreationViewController: UIViewController, UINavigationControllerDel
     
     var currentVoyage : Voyage!
     var newDepense : Depense?
-    var personneTableViewController: PersonneTableViewController!
+    var depensePersonneViewControoler: DepensePersonnesTableViewController!
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.personneTableViewController = PersonneTableViewController(tableView: tablePersonne, voyage: currentVoyage)
+        self.depensePersonneViewControoler = DepensePersonnesTableViewController(tableView: tablePersonne, voyage: currentVoyage)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,6 +42,18 @@ class DepenseCreationViewController: UIViewController, UINavigationControllerDel
             self.newDepense!.ptitre = titre
             self.newDepense!.dateDepense = dateDepense
             self.newDepense!.pphoto = image.pngData()
+            
+            var personnesDepenses : [(Personne, String)] = []
+            personnesDepenses = self.depensePersonneViewControoler.getAllPersonsSelected()
+            
+            for personne in personnesDepenses {
+                var payer : Payer
+                if let montantDouble = Double(personne.1){
+                    payer = Payer(personne: personne.0, depense: newDepense!, montant: montantDouble)                    
+                    self.newDepense!.addToPayeurs(payer)
+                }
+            }
+            
         }
     }
     

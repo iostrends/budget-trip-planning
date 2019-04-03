@@ -15,6 +15,7 @@
 		0F67F9132254E87900A1898E /* DepenseVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F67F9122254E87900A1898E /* DepenseVoyageViewController.swift */; };
 		0F67F91D2254FADA00A1898E /* DepensePersonneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F67F91C2254FADA00A1898E /* DepensePersonneCell.swift */; };
 		0F67F921225501D800A1898E /* DepensePersonnesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F67F920225501D800A1898E /* DepensePersonnesTableViewController.swift */; };
+		0F67F92322551C6000A1898E /* Payer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F67F92222551C6000A1898E /* Payer.swift */; };
 		0FB06269224A1FC500EFF43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB06268224A1FC500EFF43F /* AppDelegate.swift */; };
 		0FB0626E224A1FC500EFF43F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB0626C224A1FC500EFF43F /* Main.storyboard */; };
 		0FB06271224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0626F224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld */; };
@@ -69,6 +70,7 @@
 		0F67F9122254E87900A1898E /* DepenseVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseVoyageViewController.swift; sourceTree = "<group>"; };
 		0F67F91C2254FADA00A1898E /* DepensePersonneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensePersonneCell.swift; sourceTree = "<group>"; };
 		0F67F920225501D800A1898E /* DepensePersonnesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensePersonnesTableViewController.swift; sourceTree = "<group>"; };
+		0F67F92222551C6000A1898E /* Payer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payer.swift; sourceTree = "<group>"; };
 		0FB06265224A1FC500EFF43F /* BudgetTripPlanning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTripPlanning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB06268224A1FC500EFF43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FB0626D224A1FC500EFF43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0F22914822548FF100F95000 /* Depense.swift */,
+				0F67F92222551C6000A1898E /* Payer.swift */,
 			);
 			path = depense;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				0FC75D52224A7BB30002AF5C /* Voyage.swift in Sources */,
 				0F22915322549D4A00F95000 /* DepenseDAO.swift in Sources */,
 				E9A5261C2253D79000AB9278 /* DepenseCreationViewController.swift in Sources */,
+				0F67F92322551C6000A1898E /* Payer.swift in Sources */,
 				0FB06271224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

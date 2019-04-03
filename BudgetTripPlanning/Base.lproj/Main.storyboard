@@ -693,6 +693,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHh-rZ-wfx">
                                 <rect key="frame" x="97.666666666666671" y="610.66666666666663" width="53.000000000000014" height="30"/>
                                 <state key="normal" title="Annuler"/>
+                                <connections>
+                                    <segue destination="AAP-hS-Cb8" kind="unwind" unwindAction="unwindToDepenseVoyageList:" id="roj-Hj-iTA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-eb-wQc">
                                 <rect key="frame" x="266.33333333333331" y="610.66666666666663" width="47" height="30"/>
@@ -712,7 +715,7 @@
                                     <constraint firstAttribute="height" constant="150" id="oWj-hY-uEm"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mWV-On-IRw" customClass="DepensePersonneCell" customModule="BudgetTripPlanning" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="depensePersonneCell" id="mWV-On-IRw" customClass="DepensePersonneCell" customModule="BudgetTripPlanning" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mWV-On-IRw" id="cIv-ue-amB">
@@ -737,7 +740,7 @@
                                                     <rect key="frame" x="246" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="checkMarkTapped:" destination="mWV-On-IRw" eventType="touchUpInside" id="HOy-Qe-sgh"/>
+                                                        <action selector="checkMarkTapped:" destination="mWV-On-IRw" eventType="touchUpInside" id="5ej-3b-RC2"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -769,6 +772,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D8-ml-Ryc">
                                 <rect key="frame" x="390" y="279.33333333333331" width="30" height="30"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="loadImageButtonTappedWithSender:" destination="4Ir-Fy-o5p" eventType="touchUpInside" id="qb1-uD-VOL"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0zK-9K-eH9">
                                 <rect key="frame" x="160" y="219.33333333333337" width="200" height="150"/>
@@ -821,8 +827,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gh9-Ro-bUy"/>
                     </view>
+                    <connections>
+                        <outlet property="btnSelectAll" destination="7Ws-zX-yaD" id="joA-DF-Wbz"/>
+                        <outlet property="dateDepense" destination="T3S-kN-Uyi" id="QIE-EO-tbu"/>
+                        <outlet property="montantDepense" destination="DJa-tc-EFU" id="UwM-WL-WL9"/>
+                        <outlet property="photoDepense" destination="0zK-9K-eH9" id="kNZ-wG-OQA"/>
+                        <outlet property="photoPicker" destination="8D8-ml-Ryc" id="fpQ-rr-DRV"/>
+                        <outlet property="tablePersonne" destination="Udp-UE-SWT" id="RU8-ET-Nsh"/>
+                        <outlet property="titreDepense" destination="gLt-Pp-Tu5" id="UAq-Ng-jtu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rd-d3-Rat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="AAP-hS-Cb8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2649.609375" y="1000.5856515373353"/>
         </scene>
