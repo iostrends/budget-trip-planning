@@ -41,13 +41,14 @@ class EquilibrePersonnesTableViewController: NSObject, PersonneSetViewModelDeleg
         var balance : Double = 0
         let montantPaye : Double = PayerDAO.getTotalMontantPayePersonne(personne: personne)
         var montantapayer : Double = 0
-        let depenses : [Depense] = DepenseDAO.fetchByPersonne(personne: personne)
+        if let depenses : [Depense] = DepenseDAO.fetchByPersonne(personne: personne){
         for depense in depenses{
             let nbPayeurs : Int = PayerDAO.getnbPayeursDepense(depenses: depense)
             let montantDepense : Double = depense.montant
             montantapayer = montantapayer + (montantDepense/Double(nbPayeurs))
         }
         balance = montantPaye - montantapayer
+        }
         cell.balance.text = String(balance)
         
         
