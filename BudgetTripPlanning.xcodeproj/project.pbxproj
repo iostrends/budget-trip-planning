@@ -32,6 +32,7 @@
 		0FC75D52224A7BB30002AF5C /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC75D51224A7BB30002AF5C /* Voyage.swift */; };
 		0FCF2D5F224E36DD00899479 /* VoyageDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCF2D5E224E36DD00899479 /* VoyageDisplayCell.swift */; };
 		5120B6CF2253FDA900A48641 /* VoyageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5120B6CE2253FDA900A48641 /* VoyageDetailsViewController.swift */; };
+		E935E69F22551CAB00ECFB64 /* Rembourser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935E69E22551CAB00ECFB64 /* Rembourser.swift */; };
 		E988CE50224A42D800E71D21 /* PersonneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE4F224A42D800E71D21 /* PersonneTableViewController.swift */; };
 		E988CE52224A479400E71D21 /* PersonneFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */; };
 		E988CE54224A591300E71D21 /* PersonneSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */; };
@@ -95,6 +96,7 @@
 		0FC75D51224A7BB30002AF5C /* Voyage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Voyage.swift; path = Controllers/voyage/Voyage.swift; sourceTree = SOURCE_ROOT; };
 		0FCF2D5E224E36DD00899479 /* VoyageDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageDisplayCell.swift; sourceTree = "<group>"; };
 		5120B6CE2253FDA900A48641 /* VoyageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageDetailsViewController.swift; sourceTree = "<group>"; };
+		E935E69E22551CAB00ECFB64 /* Rembourser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rembourser.swift; sourceTree = "<group>"; };
 		E988CE4F224A42D800E71D21 /* PersonneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneTableViewController.swift; sourceTree = "<group>"; };
 		E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneFetchResultController.swift; sourceTree = "<group>"; };
 		E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonneSetViewModel.swift; path = Models/personne/PersonneSetViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -375,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				E9CF5BFE224E1DBE00843616 /* Personne.swift */,
+				E935E69E22551CAB00ECFB64 /* Rembourser.swift */,
 			);
 			path = personne;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				0F67F9132254E87900A1898E /* DepenseVoyageViewController.swift in Sources */,
 				0FB062B2224A273200EFF43F /* VoyageFetchResultController.swift in Sources */,
 				E9B0C137225511440054F659 /* EquilibrePersonneCell.swift in Sources */,
+				E935E69F22551CAB00ECFB64 /* Rembourser.swift in Sources */,
 				0FCF2D5F224E36DD00899479 /* VoyageDisplayCell.swift in Sources */,
 				0FC75D50224A3EC50002AF5C /* VoyageCreationViewController.swift in Sources */,
 				0F67F921225501D800A1898E /* DepensePersonnesTableViewController.swift in Sources */,
