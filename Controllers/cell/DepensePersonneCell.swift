@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+class DepensePersonneCell: UITableViewCell {
+
+    @IBOutlet weak var personneNomLabel: UILabel!
+    @IBOutlet weak var montantPersonne: UITextField!
+    @IBOutlet weak var checkBox: UIButton!
+    
+}
