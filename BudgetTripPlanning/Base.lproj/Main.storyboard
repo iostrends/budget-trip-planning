@@ -477,6 +477,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="380" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nOW-lW-U0a" kind="show" identifier="showDetailsDepense" id="Txu-KN-4ki"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -545,7 +548,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BhO-Br-xua">
-                                <rect key="frame" x="75" y="53" width="365" height="235"/>
+                                <rect key="frame" x="75" y="103" width="365" height="235"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="235" id="XMy-Wy-dqt"/>
                                     <constraint firstAttribute="width" constant="365" id="q0p-lG-LEF"/>
