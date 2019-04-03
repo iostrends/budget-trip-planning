@@ -53,6 +53,11 @@ class VoyageDetailsViewController: UIViewController {
                 vc.currentVoyaye = voyage
             }
         }
+        else if segue.identifier == "showEquilibreVoyage" {
+            if let vc = segue.destination as? EquilibreViewController{
+                vc.currentVoyage = voyage
+            }
+        }
     }
     
     @IBAction func unwindToVoyageDetails(_ sender: UIStoryboardSegue) {
