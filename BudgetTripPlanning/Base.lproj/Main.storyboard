@@ -470,7 +470,7 @@
                                     <constraint firstAttribute="height" constant="200" id="isx-Ph-4kd"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="97o-S0-9BZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="depenseCell" id="97o-S0-9BZ">
                                         <rect key="frame" x="0.0" y="28" width="380" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="97o-S0-9BZ" id="UsH-jW-MQH">
@@ -1198,6 +1198,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="9iX-xb-TTw"/>
-        <segue reference="UGS-iE-XZR"/>
+        <segue reference="65O-Dl-nFd"/>
     </inferredMetricsTieBreakers>
 </document>

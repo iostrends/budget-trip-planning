@@ -42,10 +42,10 @@ extension Personne {
         set { self.participer = newValue }
     }
     
-    public var depenses : [Depense] {
+    public var depenses : [Payer] {
         get {
             let set = self.payer
-            return set?.allObjects as! [Depense]
+            return set?.allObjects as! [Payer]
         }
     }
 }

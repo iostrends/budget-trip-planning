@@ -16,8 +16,6 @@ class PayerDAO {
         CoreDataManager.save()
     }
     
-    
-    
     static func fetchByPersonne(personne: Personne) ->[Payer]?{
         
         if let set : NSSet = personne.payer {
