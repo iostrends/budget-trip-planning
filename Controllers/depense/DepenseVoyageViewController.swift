@@ -24,6 +24,10 @@ class DepenseVoyageViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "addDepense" {
+            if let vc = segue.destination as? DepenseCreationViewController {
+                vc.currentVoyage = currentVoyaye
+            }
+        }
     }
 }

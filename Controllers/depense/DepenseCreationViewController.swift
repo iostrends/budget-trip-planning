@@ -20,10 +20,33 @@ class DepenseCreationViewController: UIViewController, UINavigationControllerDel
     @IBOutlet weak var tablePersonne: UITableView!
     
     var currentVoyage : Voyage!
+    var personneTableViewController: PersonneTableViewController!
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.personneTableViewController = PersonneTableViewController(tableView: tablePersonne, voyage: currentVoyage)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "validerAddVoyage" {
+            let nomVoyage : String = self.nomVoyage.text!
+            let dateFin : Date = self.dateFin.date
+            let dateDebut : Date = self.dateDebut.date
+            let image : UIImage = self.imageDisplay.image!
+            
+            self.newVoyage!.pnom = nomVoyage
+            self.newVoyage!.dateDebut = dateDebut
+            self.newVoyage!.dateFin = dateFin
+            self.newVoyage!.photo = image.pngData()
+        }
+        else if segue.identifier == "addNewPersonSegue"{
+            if let vc = segue.destination as? PersonneAjoutViewController{
+                vc.voyage = self.newVoyage
+            }
+        }else if segue.identifier == "cancelAddVoyage" {
+            CoreDataManager.context.delete(self.newVoyage)
+        }
     }
     
     @IBAction func loadImageButtonTapped(sender: UIButton) {
