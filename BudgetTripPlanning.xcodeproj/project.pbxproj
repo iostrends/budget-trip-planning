@@ -37,6 +37,7 @@
 		E9A526172253CE9500AB9278 /* PersonneDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A526162253CE9500AB9278 /* PersonneDetailsViewController.swift */; };
 		E9A5261A2253D45500AB9278 /* DepenseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A526192253D45500AB9278 /* DepenseDetailsViewController.swift */; };
 		E9A5261C2253D79000AB9278 /* DepenseCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A5261B2253D79000AB9278 /* DepenseCreationViewController.swift */; };
+		E9B0C1332254F4AF0054F659 /* EquilibreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B0C1322254F4AF0054F659 /* EquilibreViewController.swift */; };
 		E9CF5BFF224E1DBE00843616 /* Personne.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF5BFE224E1DBE00843616 /* Personne.swift */; };
 		E9CF5C03224E522A00843616 /* VoyageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CF5C02224E522A00843616 /* VoyageTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		E9A526162253CE9500AB9278 /* PersonneDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneDetailsViewController.swift; sourceTree = "<group>"; };
 		E9A526192253D45500AB9278 /* DepenseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseDetailsViewController.swift; sourceTree = "<group>"; };
 		E9A5261B2253D79000AB9278 /* DepenseCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseCreationViewController.swift; sourceTree = "<group>"; };
+		E9B0C1322254F4AF0054F659 /* EquilibreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquilibreViewController.swift; sourceTree = "<group>"; };
 		E9CF5BFE224E1DBE00843616 /* Personne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personne.swift; sourceTree = "<group>"; };
 		E9CF5C02224E522A00843616 /* VoyageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoyageTableViewController.swift; path = BudgetTripPlanning/Controllers/voyage/VoyageTableViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -264,6 +266,7 @@
 		0FB062A6224A211200EFF43F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E9B0C1312254F4730054F659 /* equilibre */,
 				E9A526182253D3A800AB9278 /* depense */,
 				0FCF2D5B224E33C500899479 /* cell */,
 				E988CE4E224A426F00E71D21 /* personne */,
@@ -346,6 +349,14 @@
 				0F67F9122254E87900A1898E /* DepenseVoyageViewController.swift */,
 			);
 			path = depense;
+			sourceTree = "<group>";
+		};
+		E9B0C1312254F4730054F659 /* equilibre */ = {
+			isa = PBXGroup;
+			children = (
+				E9B0C1322254F4AF0054F659 /* EquilibreViewController.swift */,
+			);
+			path = equilibre;
 			sourceTree = "<group>";
 		};
 		E9CF5BFD224E1DA000843616 /* personne */ = {
@@ -500,6 +511,7 @@
 				E9CF5BFF224E1DBE00843616 /* Personne.swift in Sources */,
 				0FB06269224A1FC500EFF43F /* AppDelegate.swift in Sources */,
 				0F2291552254A57700F95000 /* DepenseModelSet.swift in Sources */,
+				E9B0C1332254F4AF0054F659 /* EquilibreViewController.swift in Sources */,
 				E988CE52224A479400E71D21 /* PersonneFetchResultController.swift in Sources */,
 				E9A5261A2253D45500AB9278 /* DepenseDetailsViewController.swift in Sources */,
 				E988CE54224A591300E71D21 /* PersonneSetViewModel.swift in Sources */,
