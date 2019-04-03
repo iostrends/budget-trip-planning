@@ -733,6 +733,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D8-ml-Ryc">
                                 <rect key="frame" x="513.5" y="531.5" width="30" height="30"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="loadImageButtonTappedWithSender:" destination="4Ir-Fy-o5p" eventType="touchUpInside" id="rvt-S1-iPe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ws-zX-yaD">
                                 <rect key="frame" x="715" y="702" width="55" height="30"/>
@@ -786,6 +789,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gh9-Ro-bUy"/>
                     </view>
+                    <connections>
+                        <outlet property="btnSelectAll" destination="7Ws-zX-yaD" id="HDT-aP-d2S"/>
+                        <outlet property="dateDepense" destination="T3S-kN-Uyi" id="ksu-43-m8v"/>
+                        <outlet property="montantDepense" destination="DJa-tc-EFU" id="9ur-BB-fCJ"/>
+                        <outlet property="photoDepense" destination="0zK-9K-eH9" id="owS-US-659"/>
+                        <outlet property="photoPicker" destination="8D8-ml-Ryc" id="06r-tG-Q5p"/>
+                        <outlet property="tablePersonne" destination="Udp-UE-SWT" id="74f-wj-mgb"/>
+                        <outlet property="titreDepense" destination="gLt-Pp-Tu5" id="lPV-Ud-46E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rd-d3-Rat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

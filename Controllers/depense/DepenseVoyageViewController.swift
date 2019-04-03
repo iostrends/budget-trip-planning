@@ -22,4 +22,8 @@ class DepenseVoyageViewController: UIViewController {
         self.depenseTableViewController = DepenseTableViewController(tableView: tableDepenses, voyage: currentVoyaye)
         self.montantTotalLabel.text = String(self.depenseTableViewController.depensesViewModel.getMontantTotal())
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 }
