@@ -36,10 +36,19 @@ class EquilibrePersonnesTableViewController: NSObject, PersonneSetViewModelDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "personneCell", for: indexPath) as! EquilibrePersonneCell
-        var personne : Personne = self.personnesViewModel.get(personneAt: indexPath.row)!
+        let personne : Personne = self.personnesViewModel.get(personneAt: indexPath.row)!
         cell.nom.text = personne.nom
         var balance : Double = 0
-        var montantPaye : Double = PayerDAO.getTotalMontantPayePersonne(personne: personne)
+        let montantPaye : Double = PayerDAO.getTotalMontantPayePersonne(personne: personne)
+        var montantapayer : Double = 0
+        let depenses : [Depense] = DepenseDAO.fetchByPersonne(personne: personne)
+        for depense in depenses{
+            let nbPayeurs : Int = PayerDAO.getnbPayeursDepense(depenses: depense)
+            let montantDepense : Double = depense.montant
+            montantapayer = montantapayer + (montantDepense/Double(nbPayeurs))
+        }
+        balance = montantPaye - montantapayer
+        cell.balance.text = String(balance)
         
         
         return cell

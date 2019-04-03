@@ -20,7 +20,7 @@ class DepenseDAO {
         CoreDataManager.context.delete(depense)
     }
     
-    static func fetchByPersonne(personne: Personne) ->[Depense]?{
+    static func fetchByPersonne(personne: Personne) ->[Depense]{
         var depenses : [Depense] = []
         if let payes = PayerDAO.fetchByPersonne(personne: personne){
             for paye in payes{
