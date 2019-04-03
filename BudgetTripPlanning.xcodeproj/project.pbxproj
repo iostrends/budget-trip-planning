@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F22914622548F7400F95000 /* DepenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F22914522548F7400F95000 /* DepenseTableViewController.swift */; };
 		0F22914922548FF100F95000 /* Depense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F22914822548FF100F95000 /* Depense.swift */; };
+		0F22914C2254975B00F95000 /* DepenseSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F22914B2254975B00F95000 /* DepenseSetViewModel.swift */; };
+		0F22915322549D4A00F95000 /* DepenseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F22915222549D4A00F95000 /* DepenseDAO.swift */; };
 		0FB06269224A1FC500EFF43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB06268224A1FC500EFF43F /* AppDelegate.swift */; };
 		0FB0626E224A1FC500EFF43F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB0626C224A1FC500EFF43F /* Main.storyboard */; };
 		0FB06271224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0626F224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld */; };
@@ -56,6 +58,8 @@
 /* Begin PBXFileReference section */
 		0F22914522548F7400F95000 /* DepenseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseTableViewController.swift; sourceTree = "<group>"; };
 		0F22914822548FF100F95000 /* Depense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depense.swift; sourceTree = "<group>"; };
+		0F22914B2254975B00F95000 /* DepenseSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSetViewModel.swift; sourceTree = "<group>"; };
+		0F22915222549D4A00F95000 /* DepenseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseDAO.swift; sourceTree = "<group>"; };
 		0FB06265224A1FC500EFF43F /* BudgetTripPlanning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTripPlanning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB06268224A1FC500EFF43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FB0626D224A1FC500EFF43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +126,30 @@
 			path = depense;
 			sourceTree = "<group>";
 		};
+		0F22914A2254972E00F95000 /* depense */ = {
+			isa = PBXGroup;
+			children = (
+				0F22914B2254975B00F95000 /* DepenseSetViewModel.swift */,
+			);
+			path = depense;
+			sourceTree = "<group>";
+		};
+		0F22914F22549D2A00F95000 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				0F22915022549D3100F95000 /* depense */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		0F22915022549D3100F95000 /* depense */ = {
+			isa = PBXGroup;
+			children = (
+				0F22915222549D4A00F95000 /* DepenseDAO.swift */,
+			);
+			path = depense;
+			sourceTree = "<group>";
+		};
 		0FB0625C224A1FC500EFF43F = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +173,7 @@
 		0FB06267224A1FC500EFF43F /* BudgetTripPlanning */ = {
 			isa = PBXGroup;
 			children = (
+				0F22914F22549D2A00F95000 /* DAO */,
 				0FB25A0722525ABD00BEEE34 /* assets */,
 				0FB06299224A20A000EFF43F /* CoreData */,
 				0FB0629C224A20C100EFF43F /* Entities */,
@@ -209,6 +238,7 @@
 		0FB062A2224A20F500EFF43F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0F22914A2254972E00F95000 /* depense */,
 				E988CE55224A5C4800E71D21 /* personne */,
 				0FB062A3224A20FD00EFF43F /* voyage */,
 			);
@@ -449,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F22914C2254975B00F95000 /* DepenseSetViewModel.swift in Sources */,
 				E988CE59224A648100E71D21 /* PersonneAjoutViewController.swift in Sources */,
 				0FB062A5224A210A00EFF43F /* VoyageSetViewModel.swift in Sources */,
 				0FB062B2224A273200EFF43F /* VoyageFetchResultController.swift in Sources */,
@@ -468,6 +499,7 @@
 				0FB062A8224A217300EFF43F /* ViewController.swift in Sources */,
 				0F22914622548F7400F95000 /* DepenseTableViewController.swift in Sources */,
 				0FC75D52224A7BB30002AF5C /* Voyage.swift in Sources */,
+				0F22915322549D4A00F95000 /* DepenseDAO.swift in Sources */,
 				E9A5261C2253D79000AB9278 /* DepenseCreationViewController.swift in Sources */,
 				0FB06271224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld in Sources */,
 			);

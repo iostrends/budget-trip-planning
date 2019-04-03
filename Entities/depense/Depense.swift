@@ -35,4 +35,13 @@ extension Depense {
             self.pmontant = newValue
         }
     }
+    public var voyage : Voyage{
+        get { return self.concernerV! }
+    }
+    public var personnes : [Personne] {
+        get {
+            let set = self.payeurs
+            return set?.allObjects as! [Personne]
+        }
+    }
 }

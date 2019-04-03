@@ -48,4 +48,10 @@ extension Voyage {
             self.pphoto = newValue
         }
     }
+    public var depenses : [Depense] {
+        get {
+            let set = self.depenseV
+            return set?.allObjects as! [Depense]
+        }
+    }
 }

@@ -27,6 +27,7 @@ extension Personne {
             self.pdateDepart = newValue
         }
     }
+    
     public var dateArrivee : Date {
         get{
             return self.pdateArrivee!
@@ -35,8 +36,16 @@ extension Personne {
             self.pdateDepart = newValue
         }
     }
+    
     public var voyage : Voyage{
         get { return self.participer! }
         set { self.participer = newValue }
+    }
+    
+    public var depenses : [Depense] {
+        get {
+            let set = self.payer
+            return set?.allObjects as! [Depense]
+        }
     }
 }

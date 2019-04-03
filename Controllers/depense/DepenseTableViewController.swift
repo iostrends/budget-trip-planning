@@ -8,3 +8,29 @@
 
 import Foundation
 import UIKit
+
+import Foundation
+import UIKit
+
+class DepenseTableViewController: NSObject, DepenseSetViewModelDelegate, UITableViewDataSource {
+   
+    var depenseTableView : UITableView
+    var depensesViewModel : DepenseSetViewModel
+    let fetchResultController : PersonneFetchResultController
+    
+    init(tableView: UITableView) {
+        self.depenseTableView = tableView
+        super.init()
+        self.depenseTableView.dataSource = self
+        self.depensesViewModel.delegate = self
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func dataSetChanged() {
+        //
+    }
+    
+}
