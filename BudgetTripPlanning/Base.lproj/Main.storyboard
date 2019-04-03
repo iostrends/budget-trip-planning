@@ -893,10 +893,10 @@
             </objects>
             <point key="canvasLocation" x="1256.8359375" y="240.70278184480233"/>
         </scene>
-        <!--View Controller-->
+        <!--Depense Voyage View Controller-->
         <scene sceneID="So9-Gj-9OZ">
             <objects>
-                <viewController id="pIc-Ic-mM3" sceneMemberID="viewController">
+                <viewController id="pIc-Ic-mM3" customClass="DepenseVoyageViewController" customModule="BudgetTripPlanning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zyE-8X-AuB">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -966,6 +966,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bGg-Ob-TOo"/>
                     </view>
+                    <connections>
+                        <outlet property="montantTotalLabel" destination="5Js-Sv-mjO" id="Ol4-DM-Xb3"/>
+                        <outlet property="tableDepenses" destination="F3P-cx-Sog" id="SKk-7C-Ngq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf7-3I-fEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -58,4 +58,12 @@ class DepenseSetViewModel {
         guard (index >= 0) && (index < self.count) else { return nil}
         return self.depenses[index]
     }
+    
+    public func getMontantTotal() -> Double {
+        var montant : Double = 0.0
+        for depense in depenses {
+            montant = montant + depense.montant
+        }
+        return montant
+    }
 }

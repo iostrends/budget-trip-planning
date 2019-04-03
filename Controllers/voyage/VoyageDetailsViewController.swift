@@ -48,6 +48,10 @@ class VoyageDetailsViewController: UIViewController {
             if let vc = segue.destination as? PersonneDetailsViewController{
                 vc.personne = self.personneTableViewController.personneSelected
             }
+        }else if segue.identifier == "showDepenseVoyage" {
+            if let vc = segue.destination as? DepenseVoyageViewController{
+                vc.currentVoyaye = voyage
+            }
         }
     }
     
