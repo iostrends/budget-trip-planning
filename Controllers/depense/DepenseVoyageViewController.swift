@@ -31,9 +31,13 @@ class DepenseVoyageViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindToDepenseVoyageList(_ sender: UIStoryboardSegue) {
+    @IBAction func unwindToVoyageDetails(_ sender: UIStoryboardSegue) {
         if sender.identifier == "validerCreationDepense" {
-            
+            if let vc = sender.source as? DepenseCreationViewController {
+                if let depense = vc.newDepense{
+                    self.depenseTableViewController.depensesViewModel.add(depense: depense)
+                }
+            }
         }
     }
 }

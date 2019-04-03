@@ -42,19 +42,29 @@ class DepenseTableViewController: NSObject, DepenseSetViewModelDelegate, UITable
     }
     
     func depenseDeleted(at indexPath: IndexPath) {
-        self.depenseTableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+        self.depenseTableView.beginUpdates()
+        self.depenseTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.middle)
+        self.depenseTableView.endUpdates()
     }
     
     func depenseUpdated(at indexPath: IndexPath) {
-        self.depenseTableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+        self.depenseTableView.beginUpdates()
+        self.depenseTableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.middle)
+        self.depenseTableView.endUpdates()
     }
     
     func depenseAdded(at indexPath: IndexPath) {
-        self.depenseTableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+       self.depenseTableView.beginUpdates()
+        self.depenseTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.middle)
+        self.depenseTableView.endUpdates()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.depensesViewModel.count
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

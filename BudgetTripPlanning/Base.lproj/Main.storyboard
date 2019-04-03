@@ -693,13 +693,13 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHh-rZ-wfx">
                                 <rect key="frame" x="97.666666666666671" y="610.66666666666663" width="53.000000000000014" height="30"/>
                                 <state key="normal" title="Annuler"/>
-                                <connections>
-                                    <segue destination="AAP-hS-Cb8" kind="unwind" unwindAction="unwindToDepenseVoyageList:" id="roj-Hj-iTA"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-eb-wQc">
                                 <rect key="frame" x="266.33333333333331" y="610.66666666666663" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <segue destination="AAP-hS-Cb8" kind="unwind" identifier="validerCreationDepense" unwindAction="unwindToVoyageDetails:" id="c4z-30-pRl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGY-Fb-Wxy">
                                 <rect key="frame" x="250.66666666666663" y="376" width="37" height="21"/>
@@ -1197,7 +1197,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="U9b-De-N1C"/>
+        <segue reference="9iX-xb-TTw"/>
         <segue reference="UGS-iE-XZR"/>
     </inferredMetricsTieBreakers>
 </document>

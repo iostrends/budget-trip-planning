@@ -18,6 +18,10 @@ extension Depense {
         self.pphoto = photoDepense
     }
     
+    convenience init() {
+        self.init(context: CoreDataManager.context)
+    }
+    
     public var titre : String { return self.ptitre ?? "" }
     public var dateDepense : Date? {
         get{

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DepenseCreationViewController: UIViewController, UINavigationControllerDelegate {
+class DepenseCreationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var titreDepense: UITextField!
     @IBOutlet weak var montantDepense: UITextField!
@@ -26,11 +26,13 @@ class DepenseCreationViewController: UIViewController, UINavigationControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.delegate = self
+        self.newDepense = Depense()
         self.depensePersonneViewControoler = DepensePersonnesTableViewController(tableView: tablePersonne, voyage: currentVoyage)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "validerAddVoyage" {
+        if segue.identifier == "validerCreationDepense" {
             let titre : String = self.titreDepense.text!
             let montant : String = self.montantDepense.text!
             let dateDepense : Date = self.dateDepense.date
