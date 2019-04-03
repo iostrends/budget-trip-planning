@@ -26,9 +26,11 @@ class DepenseDAO {
             for paye in payes{
                 depenses.append(paye.depense!)
             }
-            
+            return depenses
         }
-   return depenses
+        else{
+            return nil
+        }
     }
     
     static func fetchByVoyage(voyage: Voyage) ->[Depense]?{
