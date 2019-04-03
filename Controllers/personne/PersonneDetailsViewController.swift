@@ -11,10 +11,17 @@ import UIKit
 
 class PersonneDetailsViewController: UIViewController, UINavigationControllerDelegate {
     
-    var personne : Personne!
+    @IBOutlet weak var nomPersonne: UILabel!
+    @IBOutlet weak var dateArrivee: UILabel!
+    @IBOutlet weak var dateDepart: UILabel!
+    @IBOutlet weak var montantDepense: UILabel!
+    @IBOutlet weak var tableDepense: UITableView!
+    
+    var personne : Personne?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
 }

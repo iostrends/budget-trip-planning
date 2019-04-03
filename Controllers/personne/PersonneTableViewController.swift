@@ -21,6 +21,7 @@ class PersonneTableViewController: NSObject, PersonneSetViewModelDelegate, UITab
     var personneTableView : UITableView
     var personnesViewModel : PersonneSetViewModel
     let fetchResultController : PersonneFetchResultController
+    var personneSelected : Personne?
     
     init(tableView: UITableView, voyage : Voyage?) {
         self.personneTableView = tableView
@@ -43,6 +44,13 @@ class PersonneTableViewController: NSObject, PersonneSetViewModelDelegate, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: "personneCell", for: indexPath)
         cell.textLabel?.text = self.personnesViewModel.get(personneAt: indexPath.row)?.pnom
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if let personne = self.personnesViewModel.get(personneAt: indexPath.row) {
+            self.personneSelected = personne
+        }
+        return indexPath
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

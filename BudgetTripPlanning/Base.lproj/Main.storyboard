@@ -518,6 +518,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="atA-jJ-r9O"/>
                     </view>
+                    <connections>
+                        <outlet property="dateArrivee" destination="VIA-jc-QTP" id="TL4-h9-hsm"/>
+                        <outlet property="dateDepart" destination="2oT-gC-Jgl" id="EbH-HR-GMh"/>
+                        <outlet property="montantDepense" destination="ndW-Nu-V2g" id="CQL-do-JRj"/>
+                        <outlet property="nomPersonne" destination="2Bw-A4-pLv" id="0n8-4v-7Vh"/>
+                        <outlet property="tableDepense" destination="ni3-9a-xmf" id="Pgv-K1-0Nm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4T-vC-e4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -799,6 +806,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Qlr-KM-D6T" kind="show" identifier="showDetailsPerson" id="NHm-VQ-hMj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

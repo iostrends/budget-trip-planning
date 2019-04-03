@@ -20,7 +20,6 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
     var personneTableViewController: PersonneTableViewController!
     let imagePicker = UIImagePickerController()
     var newVoyage : Voyage!
-    var personnes : [Personne] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +39,6 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
             self.newVoyage!.dateDebut = dateDebut
             self.newVoyage!.dateFin = dateFin
             self.newVoyage!.photo = image.pngData()
-            
-            for personne in personnes {
-                personne.participer = newVoyage!
-                self.newVoyage!.addToParticipants(personne)
-            }
-            
-            
         }
         else if segue.identifier == "addNewPersonSegue"{
             if let vc = segue.destination as? PersonneAjoutViewController{
@@ -76,9 +68,7 @@ class VoyageCreationViewController: UIViewController, UIImagePickerControllerDel
             if let personneAjoutViewController = sender.source as? PersonneAjoutViewController {
                 if let personne = personneAjoutViewController.personne{
                     self.newVoyage = personneAjoutViewController.voyage
-                    self.personneTableViewController.personnesViewModel.add(personne: personne)
-                    personnes.append(personne)
-                   
+                    self.personneTableViewController.personnesViewModel.add(personne: personne)                   
                 }
             }
         }

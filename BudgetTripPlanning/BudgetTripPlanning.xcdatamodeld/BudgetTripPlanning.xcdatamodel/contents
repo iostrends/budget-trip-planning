@@ -6,17 +6,14 @@
         <attribute name="pphoto" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="ptitre" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="concernerV" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyage" inverseName="depenseV" inverseEntity="Voyage" syncable="YES"/>
-    </entity>
-    <entity name="Depenser" representedClassName="Depenser" syncable="YES" codeGenerationType="class">
-        <attribute name="pmontant" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="concerneD" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Depense" syncable="YES"/>
-        <relationship name="concerneP" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Personne" syncable="YES"/>
+        <relationship name="payeurs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Personne" inverseName="payer" inverseEntity="Personne" syncable="YES"/>
     </entity>
     <entity name="Personne" representedClassName="Personne" syncable="YES" codeGenerationType="class">
         <attribute name="pdateArrivee" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pdateDepart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pnom" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="participer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyage" inverseName="participants" inverseEntity="Voyage" syncable="YES"/>
+        <relationship name="payer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="payeurs" inverseEntity="Depense" syncable="YES"/>
     </entity>
     <entity name="Rembourser" representedClassName="Rembourser" syncable="YES" codeGenerationType="class">
         <attribute name="pmontant" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -32,9 +29,8 @@
         <relationship name="participants" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Personne" inverseName="participer" inverseEntity="Personne" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Depense" positionX="-229.95703125" positionY="-126.04296875" width="128" height="118"/>
-        <element name="Depenser" positionX="49.69921875" positionY="-311.69140625" width="128" height="88"/>
-        <element name="Personne" positionX="-145.33984375" positionY="-383.484375" width="128" height="103"/>
+        <element name="Depense" positionX="-229.95703125" positionY="-126.04296875" width="128" height="133"/>
+        <element name="Personne" positionX="-145.33984375" positionY="-383.484375" width="128" height="118"/>
         <element name="Rembourser" positionX="-10.515625" positionY="-529.8125" width="128" height="88"/>
         <element name="Voyage" positionX="-527.96484375" positionY="-330.3671875" width="128" height="135"/>
     </elements>

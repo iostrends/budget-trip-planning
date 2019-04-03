@@ -18,7 +18,6 @@ class VoyageDetailsViewController: UIViewController {
     @IBOutlet weak var tablePersonne: UITableView!
     
     var voyage : Voyage?
-    var personnes : [Personne] = []
     var personneTableViewController: PersonneTableViewController!
     
     override func viewDidLoad() {
@@ -45,6 +44,10 @@ class VoyageDetailsViewController: UIViewController {
             if let vc = segue.destination as? PersonneAjoutViewController{
                 vc.voyage = self.voyage
             }
+        }else if segue.identifier == "showDetailsPerson" {
+            if let vc = segue.destination as? PersonneDetailsViewController{
+                vc.personne = self.personneTableViewController.personneSelected
+            }
         }
     }
     
@@ -53,7 +56,6 @@ class VoyageDetailsViewController: UIViewController {
             if let personneAjoutViewController = sender.source as? PersonneAjoutViewController {
                 if let personne = personneAjoutViewController.personne{
                     self.personneTableViewController.personnesViewModel.add(personne: personne)
-                    personnes.append(personne)
                 }
             }
         }
