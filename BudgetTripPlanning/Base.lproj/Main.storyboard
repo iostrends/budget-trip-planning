@@ -373,14 +373,14 @@
                                 <rect key="frame" x="77" y="537" width="53" height="30"/>
                                 <state key="normal" title="Annuler"/>
                                 <connections>
-                                    <segue destination="ubv-Sl-dbC" kind="unwind" unwindAction="unwindToVoyageCreation:" id="21V-ix-zNW"/>
+                                    <segue destination="ubv-Sl-dbC" kind="unwind" unwindAction="unwindFromPersonneCreation:" id="gni-Zy-bXU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piW-4I-8nK">
                                 <rect key="frame" x="287" y="537" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
                                 <connections>
-                                    <segue destination="ubv-Sl-dbC" kind="unwind" identifier="okAddPersonneVoyage" unwindAction="unwindToVoyageCreation:" id="KG4-lb-E3W"/>
+                                    <segue destination="ubv-Sl-dbC" kind="unwind" identifier="okAddPersonneVoyage" unwindAction="unwindFromPersonneCreation:" id="RDb-79-Qhb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -893,6 +893,9 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXo-w7-oet">
                                 <rect key="frame" x="258" y="283.33333333333331" width="22" height="22"/>
+                                <connections>
+                                    <segue destination="vZn-xg-7xJ" kind="presentation" identifier="addNewPersonSegue" id="1lU-39-zXB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personne :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDa-c2-k7F">
                                 <rect key="frame" x="104" y="284" width="82" height="21"/>
@@ -1199,5 +1202,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="9iX-xb-TTw"/>
         <segue reference="65O-Dl-nFd"/>
+        <segue reference="tDP-lH-ihF"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -60,7 +60,7 @@ class VoyageDetailsViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindToVoyageDetails(_ sender: UIStoryboardSegue) {
+    @IBAction func unwindFromPersonneCreation(_ sender: UIStoryboardSegue) {
         if sender.identifier == "okAddPersonneVoyage" {
             if let personneAjoutViewController = sender.source as? PersonneAjoutViewController {
                 if let personne = personneAjoutViewController.personne{

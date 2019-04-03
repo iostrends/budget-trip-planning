@@ -29,7 +29,8 @@ class PersonneAjoutViewController: UIViewController, UINavigationControllerDeleg
             
             self.personne = Personne(nom: nom, voyage: self.voyage, dateDepart: dateDepart, dateArrivee: dateArrivee)
             CoreDataManager.save()
-        }else{
+        }
+        else{
             self.personne = nil
         }
     }
