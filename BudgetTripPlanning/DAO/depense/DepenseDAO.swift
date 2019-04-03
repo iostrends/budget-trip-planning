@@ -21,7 +21,14 @@ class DepenseDAO {
     }
     
     static func fetchByPersonne(personne: Personne) ->[Depense]?{
-        return personne.depenses
+        var depenses : [Depense] = []
+        if let payes = PayerDAO.fetchByPersonne(personne: personne){
+            for paye in payes{
+                depenses.append(paye.depense!)
+            }
+            
+        }
+   return depenses
     }
     
     static func fetchByVoyage(voyage: Voyage) ->[Depense]?{

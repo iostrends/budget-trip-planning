@@ -33,6 +33,7 @@
 		0FCF2D5F224E36DD00899479 /* VoyageDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCF2D5E224E36DD00899479 /* VoyageDisplayCell.swift */; };
 		5120B6CF2253FDA900A48641 /* VoyageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5120B6CE2253FDA900A48641 /* VoyageDetailsViewController.swift */; };
 		E935E69F22551CAB00ECFB64 /* Rembourser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935E69E22551CAB00ECFB64 /* Rembourser.swift */; };
+		E935E6A42255228C00ECFB64 /* PayerDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E935E6A32255228C00ECFB64 /* PayerDAO.swift */; };
 		E988CE50224A42D800E71D21 /* PersonneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE4F224A42D800E71D21 /* PersonneTableViewController.swift */; };
 		E988CE52224A479400E71D21 /* PersonneFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */; };
 		E988CE54224A591300E71D21 /* PersonneSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */; };
@@ -97,6 +98,7 @@
 		0FCF2D5E224E36DD00899479 /* VoyageDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageDisplayCell.swift; sourceTree = "<group>"; };
 		5120B6CE2253FDA900A48641 /* VoyageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageDetailsViewController.swift; sourceTree = "<group>"; };
 		E935E69E22551CAB00ECFB64 /* Rembourser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rembourser.swift; sourceTree = "<group>"; };
+		E935E6A32255228C00ECFB64 /* PayerDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayerDAO.swift; sourceTree = "<group>"; };
 		E988CE4F224A42D800E71D21 /* PersonneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneTableViewController.swift; sourceTree = "<group>"; };
 		E988CE51224A479400E71D21 /* PersonneFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonneFetchResultController.swift; sourceTree = "<group>"; };
 		E988CE53224A591300E71D21 /* PersonneSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonneSetViewModel.swift; path = Models/personne/PersonneSetViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				0F22915222549D4A00F95000 /* DepenseDAO.swift */,
+				E935E6A32255228C00ECFB64 /* PayerDAO.swift */,
 			);
 			path = depense;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				5120B6CF2253FDA900A48641 /* VoyageDetailsViewController.swift in Sources */,
 				0FB062A8224A217300EFF43F /* ViewController.swift in Sources */,
 				0F22914622548F7400F95000 /* DepenseTableViewController.swift in Sources */,
+				E935E6A42255228C00ECFB64 /* PayerDAO.swift in Sources */,
 				0FC75D52224A7BB30002AF5C /* Voyage.swift in Sources */,
 				0F22915322549D4A00F95000 /* DepenseDAO.swift in Sources */,
 				E9B0C1352255077C0054F659 /* EquilibrePersonnesTableViewController.swift in Sources */,

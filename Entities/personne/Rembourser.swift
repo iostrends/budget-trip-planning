@@ -21,16 +21,10 @@ public var leRembourse : Personne {
     get{
        return self.rembourse!
     }
-    set{
-        self.rembourse = newValue
-    }
-     }
+}
 public var leRembourseur : Personne {
     get{
         return self.rembourseur!
-    }
-    set{
-        self.rembourseur = newValue
     }
 }
 
