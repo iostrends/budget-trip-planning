@@ -11,6 +11,7 @@
 		0F22914922548FF100F95000 /* Depense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F22914822548FF100F95000 /* Depense.swift */; };
 		0F22914C2254975B00F95000 /* DepenseSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F22914B2254975B00F95000 /* DepenseSetViewModel.swift */; };
 		0F22915322549D4A00F95000 /* DepenseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F22915222549D4A00F95000 /* DepenseDAO.swift */; };
+		0F2291552254A57700F95000 /* DepenseModelSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2291542254A57700F95000 /* DepenseModelSet.swift */; };
 		0FB06269224A1FC500EFF43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB06268224A1FC500EFF43F /* AppDelegate.swift */; };
 		0FB0626E224A1FC500EFF43F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB0626C224A1FC500EFF43F /* Main.storyboard */; };
 		0FB06271224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0626F224A1FC500EFF43F /* BudgetTripPlanning.xcdatamodeld */; };
@@ -60,6 +61,7 @@
 		0F22914822548FF100F95000 /* Depense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depense.swift; sourceTree = "<group>"; };
 		0F22914B2254975B00F95000 /* DepenseSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSetViewModel.swift; sourceTree = "<group>"; };
 		0F22915222549D4A00F95000 /* DepenseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseDAO.swift; sourceTree = "<group>"; };
+		0F2291542254A57700F95000 /* DepenseModelSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseModelSet.swift; sourceTree = "<group>"; };
 		0FB06265224A1FC500EFF43F /* BudgetTripPlanning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetTripPlanning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB06268224A1FC500EFF43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FB0626D224A1FC500EFF43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				0F22914B2254975B00F95000 /* DepenseSetViewModel.swift */,
+				0F2291542254A57700F95000 /* DepenseModelSet.swift */,
 			);
 			path = depense;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				E9A526172253CE9500AB9278 /* PersonneDetailsViewController.swift in Sources */,
 				E9CF5BFF224E1DBE00843616 /* Personne.swift in Sources */,
 				0FB06269224A1FC500EFF43F /* AppDelegate.swift in Sources */,
+				0F2291552254A57700F95000 /* DepenseModelSet.swift in Sources */,
 				E988CE52224A479400E71D21 /* PersonneFetchResultController.swift in Sources */,
 				E9A5261A2253D45500AB9278 /* DepenseDetailsViewController.swift in Sources */,
 				E988CE54224A591300E71D21 /* PersonneSetViewModel.swift in Sources */,

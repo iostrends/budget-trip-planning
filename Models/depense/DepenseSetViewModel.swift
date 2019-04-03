@@ -18,30 +18,44 @@ protocol DepenseSetViewModelDelegate {
 }
 
 class DepenseSetViewModel {
+    private let modelSet : DepenseModelSet
+    var depenses: [Depense] = []
     var delegate: DepenseSetViewModelDelegate? = nil
-    var depensesFetched: NSFetchedResultsController<Depense>
     
-    init(data: NSFetchedResultsController<Depense>) {
-        self.depensesFetched = data
+    init(personne: Personne) {
+        self.modelSet = DepenseModelSet(personne: personne)
+        let it = modelSet.makeIterator()
+        while !it.end() {
+            if let depense = it.current() {
+                self.depenses.append(depense)
+            }
+            it.next()
+        }
+    }
+    
+    init(voyage: Voyage) {
+        self.modelSet = DepenseModelSet(voyage: voyage)
+        let it = modelSet.makeIterator()
+        while !it.end() {
+            if let depense = it.current() {
+                self.depenses.append(depense)
+            }
+            it.next()
+        }
     }
     
     public func add(depense: Depense) {
-        if let indexPath = self.depensesFetched.indexPath(forObject: depense) {
-            self.delegate?.depenseAdded(at: indexPath)
-        }
+        self.modelSet.add(depense: depense)
+        self.depenses.append(depense)
+        self.delegate?.depenseAdded(at: IndexPath(row:self.modelSet.count-1,section:0))
     }
     
     public var count : Int {
-        return self.depensesFetched.fetchedObjects?.count ?? 0
+        return self.depenses.count
     }
     
     public func get(depenseAt index: Int) -> Depense?{
-        return self.depensesFetched.object(at: IndexPath(row: index, section: 0))
-    }
-    
-    public func delete(depense: Depense) {
-        if let indexPath = self.depensesFetched.indexPath(forObject: depense) {
-            self.delegate?.depenseDeleted(at: indexPath)
-        }
+        guard (index >= 0) && (index < self.count) else { return nil}
+        return self.depenses[index]
     }
 }
