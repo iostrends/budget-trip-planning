@@ -20,6 +20,7 @@ class DepenseCreationViewController: UIViewController, UINavigationControllerDel
     @IBOutlet weak var tablePersonne: UITableView!
     
     var currentVoyage : Voyage!
+    var newDepense : Depense?
     var personneTableViewController: PersonneTableViewController!
     let imagePicker = UIImagePickerController()
     
@@ -30,22 +31,17 @@ class DepenseCreationViewController: UIViewController, UINavigationControllerDel
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "validerAddVoyage" {
-            let nomVoyage : String = self.nomVoyage.text!
-            let dateFin : Date = self.dateFin.date
-            let dateDebut : Date = self.dateDebut.date
-            let image : UIImage = self.imageDisplay.image!
+            let titre : String = self.titreDepense.text!
+            let montant : String = self.montantDepense.text!
+            let dateDepense : Date = self.dateDepense.date
+            let image : UIImage = self.photoDepense.image!
             
-            self.newVoyage!.pnom = nomVoyage
-            self.newVoyage!.dateDebut = dateDebut
-            self.newVoyage!.dateFin = dateFin
-            self.newVoyage!.photo = image.pngData()
-        }
-        else if segue.identifier == "addNewPersonSegue"{
-            if let vc = segue.destination as? PersonneAjoutViewController{
-                vc.voyage = self.newVoyage
+            if let montantDouble = Double(montant){
+                self.newDepense!.montant = montantDouble
             }
-        }else if segue.identifier == "cancelAddVoyage" {
-            CoreDataManager.context.delete(self.newVoyage)
+            self.newDepense!.ptitre = titre
+            self.newDepense!.dateDepense = dateDepense
+            self.newDepense!.pphoto = image.pngData()
         }
     }
     
