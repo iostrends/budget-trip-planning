@@ -470,14 +470,39 @@
                                     <constraint firstAttribute="height" constant="200" id="isx-Ph-4kd"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="depenseCell" id="97o-S0-9BZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="depenseCell" id="97o-S0-9BZ" customClass="DepenseCell" customModule="BudgetTripPlanning" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="380" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="97o-S0-9BZ" id="UsH-jW-MQH">
                                             <rect key="frame" x="0.0" y="0.0" width="380" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NomDep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHr-tq-2FQ">
+                                                    <rect key="frame" x="20" y="12" width="68" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Montant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4T-H5-V0Z">
+                                                    <rect key="frame" x="139" y="11" width="64" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-HJ-dGT">
+                                                    <rect key="frame" x="211" y="12" width="11" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="montantDep2" destination="x4T-H5-V0Z" id="P24-t3-ME0"/>
+                                            <outlet property="nomDepLabel2" destination="mHr-tq-2FQ" id="zqx-Gv-y64"/>
                                             <segue destination="nOW-lW-U0a" kind="show" identifier="showDetailsDepense" id="65O-Dl-nFd"/>
                                         </connections>
                                     </tableViewCell>
@@ -1226,7 +1251,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="9iX-xb-TTw"/>
-        <segue reference="UGS-iE-XZR"/>
+        <segue reference="65O-Dl-nFd"/>
         <segue reference="tDP-lH-ihF"/>
     </inferredMetricsTieBreakers>
 </document>
