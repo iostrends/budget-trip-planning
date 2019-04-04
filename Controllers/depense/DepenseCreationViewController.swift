@@ -44,6 +44,7 @@ class DepenseCreationViewController: UIViewController, UIImagePickerControllerDe
             self.newDepense!.ptitre = titre
             self.newDepense!.dateDepense = dateDepense
             self.newDepense!.pphoto = image.pngData()
+            self.newDepense!.concernerV = currentVoyage
             
             var personnesDepenses : [(Personne, String)] = []
             personnesDepenses = self.depensePersonneViewControoler.getAllPersonsSelected()
