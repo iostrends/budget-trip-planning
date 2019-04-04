@@ -75,8 +75,11 @@ class DepenseTableViewController: NSObject, DepenseSetViewModelDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "depenseCell", for: indexPath)
-        cell.textLabel?.text = self.depensesViewModel.get(depenseAt: indexPath.row)?.titre
+        let cell = tableView.dequeueReusableCell(withIdentifier: "depenseCell", for: indexPath) as! DepenseCell
+        cell.nomDepLabel.text = self.depensesViewModel.get(depenseAt: indexPath.row)?.titre
+        if let montantDouble = self.depensesViewModel.get(depenseAt: indexPath.row)?.montant{
+            cell.montantDep.text = String(montantDouble)
+        }
         return cell
     }    
 }
