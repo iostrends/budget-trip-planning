@@ -21,7 +21,7 @@ class EquilibreViewController: UIViewController, UINavigationControllerDelegate 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "creerDepenseSegue"{
+        if segue.identifier == "addDepense"{
             if let vc = segue.destination as? PersonneAjoutViewController{
                 vc.voyage = self.currentVoyage
             }

@@ -16,7 +16,7 @@
 import Foundation
 import UIKit
 
-class DepensePersonnesDetailsTableController: NSObject, DepenseSetViewModelDelegate, UITableViewDataSource {
+class DepensePersonnesDetailsTableController: NSObject, DepenseSetViewModelDelegate, UITableViewDataSource, UITableViewDelegate {
     
     var depenseTableView : UITableView
     var depensesViewModel : DepenseSetViewModel
@@ -25,6 +25,7 @@ class DepensePersonnesDetailsTableController: NSObject, DepenseSetViewModelDeleg
         self.depenseTableView = tableView
         self.depensesViewModel = DepenseSetViewModel(voyage: voyage)
         super.init()
+        self.depenseTableView.delegate = self
         self.depenseTableView.dataSource = self
         self.depensesViewModel.delegate = self
     }
@@ -33,6 +34,7 @@ class DepensePersonnesDetailsTableController: NSObject, DepenseSetViewModelDeleg
         self.depenseTableView = tableView
         self.depensesViewModel = DepenseSetViewModel(personne: personne)
         super.init()
+        self.depenseTableView.delegate = self
         self.depenseTableView.dataSource = self
         self.depensesViewModel.delegate = self
     }
@@ -80,7 +82,7 @@ class DepensePersonnesDetailsTableController: NSObject, DepenseSetViewModelDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "depenseCell", for: indexPath) as! DepenseCell2
         cell.nomDepLabel.text = self.depensesViewModel.get(depenseAt: indexPath.row)?.titre
-        if let montantDouble = self.depensesViewModel.get(depenseAt: indexPath.row)?.titre{
+        if let montantDouble = self.depensesViewModel.get(depenseAt: indexPath.row)?.montant{
             cell.montantLabel.text = String(montantDouble)
         }
         return cell

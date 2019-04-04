@@ -32,7 +32,7 @@ class PersonneFetchResultController: NSObject, NSFetchedResultsControllerDelegat
         super.init()
         do{
             self.depense = depense
-            try self.personnesFetched.performFetch()
+            try self.personnesDepenseFetched.performFetch()
         }catch let error as NSError {
             fatalError(error.description)
         }
@@ -53,7 +53,7 @@ class PersonneFetchResultController: NSObject, NSFetchedResultsControllerDelegat
     lazy var personnesDepenseFetched : NSFetchedResultsController<Personne> = {
         let request : NSFetchRequest<Personne> = Personne.fetchRequest()
         if let laDepense = depense{
-            request.predicate = NSPredicate(format: "payer.depense == %@", laDepense)
+            request.predicate = NSPredicate(format: "ANY payer.depense == %@", laDepense)
         }
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Personne.pnom), ascending:true)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)

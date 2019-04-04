@@ -30,7 +30,6 @@ class DepenseDetailsViewController: UIViewController, UINavigationControllerDele
         let data = self.depense.photoDepense
         self.image.image = UIImage(data: data)
         titre.text = depense.titre
-        
        
         self.personnesDepenseTableViewController = PersonnesDepenseTableViewController(tableView: self.tableviewPersonnesDepense, depense: depense)
     }

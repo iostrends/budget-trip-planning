@@ -12,7 +12,7 @@ import UIKit
 import Foundation
 import UIKit
 
-class DepenseTableViewController: NSObject, DepenseSetViewModelDelegate, UITableViewDataSource {
+class DepenseTableViewController: NSObject, DepenseSetViewModelDelegate, UITableViewDataSource, UITableViewDelegate{
   
     var depenseTableView : UITableView
     var depensesViewModel : DepenseSetViewModel
@@ -22,6 +22,7 @@ class DepenseTableViewController: NSObject, DepenseSetViewModelDelegate, UITable
         self.depensesViewModel = DepenseSetViewModel(voyage: voyage)
         super.init()
         self.depenseTableView.dataSource = self
+        self.depenseTableView.delegate = self
         self.depensesViewModel.delegate = self
     }
     
@@ -30,6 +31,7 @@ class DepenseTableViewController: NSObject, DepenseSetViewModelDelegate, UITable
         self.depensesViewModel = DepenseSetViewModel(personne: personne)
         super.init()
         self.depenseTableView.dataSource = self
+        self.depenseTableView.delegate = self
         self.depensesViewModel.delegate = self
     }
     

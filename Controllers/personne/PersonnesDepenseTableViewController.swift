@@ -16,6 +16,7 @@ class PersonnesDepenseTableViewController: NSObject, PersonneSetViewModelDelegat
     let fetchResultController : PersonneFetchResultController
     var personneSelected : Personne?
     var depense : Depense?
+    
     init(tableView: UITableView, depense : Depense?) {
         self.personneTableView = tableView
         self.fetchResultController = PersonneFetchResultController(view : tableView, depense : depense)

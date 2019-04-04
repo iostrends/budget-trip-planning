@@ -503,19 +503,19 @@
                                         <connections>
                                             <outlet property="montantLabel" destination="x4T-H5-V0Z" id="Xkw-5e-0vv"/>
                                             <outlet property="nomDepLabel" destination="mHr-tq-2FQ" id="UYh-j6-Ng3"/>
-                                            <segue destination="nOW-lW-U0a" kind="show" identifier="showDetailsDepense" id="65O-Dl-nFd"/>
+                                            <segue destination="nOW-lW-U0a" kind="show" identifier="detailsDepense" id="65O-Dl-nFd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total voyage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaM-7C-gNd">
-                                <rect key="frame" x="11.666666666666664" y="431" width="101" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total personne:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaM-7C-gNd">
+                                <rect key="frame" x="3" y="431" width="118" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="montant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-Nu-V2g">
-                                <rect key="frame" x="132.66666666666666" y="431" width="64" height="21"/>
+                                <rect key="frame" x="141" y="431" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1091,7 +1091,7 @@
                                         <connections>
                                             <outlet property="montantDep" destination="bNV-cG-3DA" id="MvE-Jv-2im"/>
                                             <outlet property="nomDepLabel" destination="Wes-Ny-5wN" id="Wcb-wi-vHf"/>
-                                            <segue destination="nOW-lW-U0a" kind="show" identifier="showDetailsDepense" id="UGS-iE-XZR"/>
+                                            <segue destination="nOW-lW-U0a" kind="show" identifier="detailsDepense" id="UGS-iE-XZR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1257,7 +1257,7 @@
                                 <rect key="frame" x="239.33333333333337" y="132.33333333333334" width="101" height="30"/>
                                 <state key="normal" title="Créer dépense"/>
                                 <connections>
-                                    <segue destination="4Ir-Fy-o5p" kind="show" identifier="creerDepenseSegue" id="U9b-De-N1C"/>
+                                    <segue destination="4Ir-Fy-o5p" kind="show" identifier="addDepense" id="U9b-De-N1C"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1292,7 +1292,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9iX-xb-TTw"/>
+        <segue reference="U9b-De-N1C"/>
         <segue reference="65O-Dl-nFd"/>
         <segue reference="tDP-lH-ihF"/>
     </inferredMetricsTieBreakers>

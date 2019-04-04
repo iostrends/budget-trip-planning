@@ -32,7 +32,8 @@ class PersonneDetailsViewController: UIViewController, UINavigationControllerDel
         if let date = self.personne?.dateDepart {
             let dateString = formatter.string(from: date)
             self.dateDepart.text = dateString
-        }        
+        }
+        self.montantDepense.text = String(PayerDAO.getTotalMontantPayePersonne(personne: personne!))
         self.depenseTableViewController = DepensePersonnesDetailsTableController(tableView: self.tableDepense, personne: self.personne!)
     }
     
