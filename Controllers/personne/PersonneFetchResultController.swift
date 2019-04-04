@@ -14,6 +14,7 @@ import UIKit
 class PersonneFetchResultController: NSObject, NSFetchedResultsControllerDelegate {
     let tableView : UITableView
     var voyage : Voyage?
+    var depense : Depense?
     
     init(view: UITableView, leVoyage: Voyage?) {
         self.tableView = view
@@ -26,12 +27,34 @@ class PersonneFetchResultController: NSObject, NSFetchedResultsControllerDelegat
         }
     }
     
+    init(view: UITableView, depense: Depense?) {
+        self.tableView = view
+        super.init()
+        do{
+            self.depense = depense
+            try self.personnesFetched.performFetch()
+        }catch let error as NSError {
+            fatalError(error.description)
+        }
+    }
+    
     lazy var personnesFetched : NSFetchedResultsController<Personne> = {
         let request : NSFetchRequest<Personne> = Personne.fetchRequest()
         if let leVoyage = voyage{
         request.predicate = NSPredicate(format: "participer == %@", leVoyage)
         }
         
+        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Personne.pnom), ascending:true)]
+        let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchResultController.delegate = self
+        return fetchResultController
+    }()
+    
+    lazy var personnesDepenseFetched : NSFetchedResultsController<Personne> = {
+        let request : NSFetchRequest<Personne> = Personne.fetchRequest()
+        if let laDepense = depense{
+            request.predicate = NSPredicate(format: "payer.depense == %@", laDepense)
+        }
         request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Personne.pnom), ascending:true)]
         let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
         fetchResultController.delegate = self

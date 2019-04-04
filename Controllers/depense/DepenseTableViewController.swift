@@ -16,7 +16,7 @@ class DepenseTableViewController: NSObject, DepenseSetViewModelDelegate, UITable
   
     var depenseTableView : UITableView
     var depensesViewModel : DepenseSetViewModel
-    
+    var depenseSelected : Depense?
     init(tableView: UITableView, voyage: Voyage) {
         self.depenseTableView = tableView
         self.depensesViewModel = DepenseSetViewModel(voyage: voyage)
@@ -57,6 +57,13 @@ class DepenseTableViewController: NSObject, DepenseSetViewModelDelegate, UITable
        self.depenseTableView.beginUpdates()
         self.depenseTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.middle)
         self.depenseTableView.endUpdates()
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if let depense = self.depensesViewModel.get(depenseAt: indexPath.row) {
+            self.depenseSelected = depense
+        }
+        return indexPath
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
