@@ -34,5 +34,14 @@ class PersonneDetailsViewController: UIViewController, UINavigationControllerDel
             self.dateDepart.text = dateString
         }        
         self.depenseTableViewController = DepenseTableViewController(tableView: self.tableDepense, personne: self.personne!)
-    }    
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "detailsDepense" {
+            if let vc = segue.destination as? DepenseDetailsViewController {
+                vc.depense = self.depenseTableViewController.depenseSelected
+            }
+        }
+    }
 }

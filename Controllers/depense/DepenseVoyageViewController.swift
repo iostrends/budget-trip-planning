@@ -29,6 +29,11 @@ class DepenseVoyageViewController: UIViewController {
                 vc.currentVoyage = currentVoyaye
             }
         }
+        else if segue.identifier == "detailsDepense" {
+            if let vc = segue.destination as? DepenseDetailsViewController {
+                vc.depense = self.depenseTableViewController.depenseSelected
+            }
+        }
     }
     
     @IBAction func unwindToVoyageDetails(_ sender: UIStoryboardSegue) {

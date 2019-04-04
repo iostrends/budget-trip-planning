@@ -611,13 +611,45 @@
                                     <constraint firstAttribute="width" constant="300" id="FFD-Ro-eN8"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zdy-I2-jwo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personneCell" id="zdy-I2-jwo" customClass="PersonneDepenseCell" customModule="BudgetTripPlanning" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zdy-I2-jwo" id="vEM-g3-6pE">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vV-8u-Sme">
+                                                    <rect key="frame" x="36" y="11.333333333333336" width="33.666666666666657" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="montant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7es-B8-XLF">
+                                                    <rect key="frame" x="149.66666666666666" y="11.333333333333336" width="64" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOa-FL-5fM">
+                                                    <rect key="frame" x="228.66666666666666" y="11.333333333333336" width="10.666666666666657" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7es-B8-XLF" firstAttribute="leading" secondItem="1vV-8u-Sme" secondAttribute="trailing" constant="80" id="1Ov-lD-lPf"/>
+                                                <constraint firstItem="fOa-FL-5fM" firstAttribute="leading" secondItem="7es-B8-XLF" secondAttribute="trailing" constant="15" id="9UQ-I5-1PF"/>
+                                                <constraint firstItem="1vV-8u-Sme" firstAttribute="centerY" secondItem="vEM-g3-6pE" secondAttribute="centerY" id="brH-Bz-3P6"/>
+                                                <constraint firstItem="fOa-FL-5fM" firstAttribute="centerY" secondItem="vEM-g3-6pE" secondAttribute="centerY" id="eDZ-Tu-yZi"/>
+                                                <constraint firstItem="7es-B8-XLF" firstAttribute="centerY" secondItem="vEM-g3-6pE" secondAttribute="centerY" id="fIB-uS-ad4"/>
+                                                <constraint firstItem="1vV-8u-Sme" firstAttribute="leading" secondItem="vEM-g3-6pE" secondAttribute="leadingMargin" constant="20" id="sJL-Ei-O0l"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="montant" destination="7es-B8-XLF" id="PEH-6Q-NXZ"/>
+                                            <outlet property="nom" destination="1vV-8u-Sme" id="8TQ-le-zwC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -647,6 +679,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mmK-oF-HeB"/>
                     </view>
+                    <connections>
+                        <outlet property="date" destination="61O-bG-TP6" id="b3k-92-NTC"/>
+                        <outlet property="image" destination="BhO-Br-xua" id="iq4-C8-ugv"/>
+                        <outlet property="montant" destination="4eo-bS-WRI" id="r5c-fS-7hZ"/>
+                        <outlet property="tableviewPersonnesDepense" destination="sbL-jL-Ozw" id="IM2-Nm-MyD"/>
+                        <outlet property="titre" destination="UBg-Ye-Cfc" id="hRX-Ex-hjZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbb-GE-kKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

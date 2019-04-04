@@ -48,4 +48,13 @@ extension Depense {
             return set?.allObjects as! [Personne]
         }
     }
+    
+    public var photoDepense : Data{
+        get{
+            return self.pphoto!
+        }
+        set{
+            self.pphoto = newValue
+        }
+    }
 }
