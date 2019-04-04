@@ -17,7 +17,7 @@ class PersonneDetailsViewController: UIViewController, UINavigationControllerDel
     @IBOutlet weak var montantDepense: UILabel!
     @IBOutlet weak var tableDepense: UITableView!
     
-    var depenseTableViewController : DepenseTableViewController!
+    var depenseTableViewController : DepensePersonnesDetailsTableController!
     var personne : Personne?
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class PersonneDetailsViewController: UIViewController, UINavigationControllerDel
             let dateString = formatter.string(from: date)
             self.dateDepart.text = dateString
         }        
-        self.depenseTableViewController = DepenseTableViewController(tableView: self.tableDepense, personne: self.personne!)
+        self.depenseTableViewController = DepensePersonnesDetailsTableController(tableView: self.tableDepense, personne: self.personne!)
     }
     
     

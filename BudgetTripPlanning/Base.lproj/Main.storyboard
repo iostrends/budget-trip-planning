@@ -470,7 +470,7 @@
                                     <constraint firstAttribute="height" constant="200" id="isx-Ph-4kd"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="depenseCell" id="97o-S0-9BZ" customClass="DepenseCell" customModule="BudgetTripPlanning" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="depenseCell" id="97o-S0-9BZ" customClass="DepenseCell2" customModule="BudgetTripPlanning" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="380" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="97o-S0-9BZ" id="UsH-jW-MQH">
@@ -501,8 +501,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="montantDep2" destination="x4T-H5-V0Z" id="P24-t3-ME0"/>
-                                            <outlet property="nomDepLabel2" destination="mHr-tq-2FQ" id="zqx-Gv-y64"/>
+                                            <outlet property="montantLabel" destination="x4T-H5-V0Z" id="Xkw-5e-0vv"/>
+                                            <outlet property="nomDepLabel" destination="mHr-tq-2FQ" id="UYh-j6-Ng3"/>
                                             <segue destination="nOW-lW-U0a" kind="show" identifier="showDetailsDepense" id="65O-Dl-nFd"/>
                                         </connections>
                                     </tableViewCell>
@@ -757,6 +757,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHh-rZ-wfx">
                                 <rect key="frame" x="97.666666666666671" y="610.66666666666663" width="53.000000000000014" height="30"/>
                                 <state key="normal" title="Annuler"/>
+                                <connections>
+                                    <segue destination="AAP-hS-Cb8" kind="unwind" unwindAction="unwindToVoyageDetails:" id="jDq-2k-2fc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-eb-wQc">
                                 <rect key="frame" x="266.33333333333331" y="610.66666666666663" width="47" height="30"/>

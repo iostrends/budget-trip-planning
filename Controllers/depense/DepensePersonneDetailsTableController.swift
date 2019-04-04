@@ -1,19 +1,26 @@
 //
-//  DepenseTableViewController.swift
+//  PersonneTableController.swift
 //  BudgetTripPlanning
 //
-//  Created by Alexis SANCHEZ01 (01) on 03/04/2019.
+//  Created by Alexis LUANGPRASEUTH on 26/03/2019.
+//  Copyright © 2019 Alexis SANCHEZ01 (01). All rights reserved.
+//
+//
+//  VoyageTableController.swift
+//  BudgetTripPlanning
+//
+//  Created by Alexis SANCHEZ01 (01) on 22/03/2019.
 //  Copyright © 2019 Alexis SANCHEZ01 (01). All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class DepensePersonneDetailsTableController: NSObject, DepenseSetViewModelDelegate, UITableViewDataSource {
+class DepensePersonnesDetailsTableController: NSObject, DepenseSetViewModelDelegate, UITableViewDataSource {
     
     var depenseTableView : UITableView
     var depensesViewModel : DepenseSetViewModel
-    
+    var depenseSelected : Depense?
     init(tableView: UITableView, voyage: Voyage) {
         self.depenseTableView = tableView
         self.depensesViewModel = DepenseSetViewModel(voyage: voyage)
@@ -56,6 +63,13 @@ class DepensePersonneDetailsTableController: NSObject, DepenseSetViewModelDelega
         self.depenseTableView.endUpdates()
     }
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if let depense = self.depensesViewModel.get(depenseAt: indexPath.row) {
+            self.depenseSelected = depense
+        }
+        return indexPath
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.depensesViewModel.count
     }
@@ -63,12 +77,11 @@ class DepensePersonneDetailsTableController: NSObject, DepenseSetViewModelDelega
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "depenseCell", for: indexPath) as! DepenseCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "depenseCell", for: indexPath) as! DepenseCell2
         cell.nomDepLabel.text = self.depensesViewModel.get(depenseAt: indexPath.row)?.titre
-        if let montantDouble = self.depensesViewModel.get(depenseAt: indexPath.row)?.montant{
-            cell.montantDep.text = String(montantDouble)
+        if let montantDouble = self.depensesViewModel.get(depenseAt: indexPath.row)?.titre{
+            cell.montantLabel.text = String(montantDouble)
         }
         return cell
     }
